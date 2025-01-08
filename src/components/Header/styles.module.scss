@@ -1,0 +1,99 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  width: 100%;
+  z-index: 99;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 28px;
+    width: 100%;
+    max-width: 1440px;
+
+    .logo {
+      width: 76px;
+      height: auto;
+      transition: all ease 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+
+    .menuBarsIcon {
+      width: 20px;
+      height: 20px;
+      z-index: 999;
+      cursor: pointer;
+
+      & path {
+        transition: all ease 0.35s;
+      }
+
+      &.animateToCross {
+        width: 20px;
+        height: 20px;
+
+        path:nth-child(1) {
+          transform: translateY(14.5px) translate(-2px) rotate(-45deg);
+        }
+        path:nth-child(2) {
+          transform: translateY(-4px) translate(11.5px) rotate(45deg);
+        }
+      }
+    }
+
+    .menu {
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: start;
+      gap: 10px;
+      transition: all ease-in-out 0.3s;
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      max-width: 1440px;
+      transform: translateY(-200px);
+      opacity: 0;
+      padding-bottom: 38px;
+      padding-top: 38px;
+      visibility: hidden;
+  
+      a {
+        text-decoration: none;
+        transition: opacity ease 0.3s;
+        cursor: pointer;
+        text-transform: uppercase;
+        opacity: 0;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 32.2px;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+  
+      &.opened {
+        transform: translateY(120px);
+        opacity: 1;
+        visibility: visible;
+
+        a {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,55 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+  margin-top: 150px;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+
+    .infoBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: end;
+      flex: 1;
+  
+      &:first-child {
+        align-items: start;
+      }
+  
+      h1 {
+        font-size: 30px;
+        line-height: 42px;
+        font-weight: 400;
+        color: var(--gray);
+  
+        span {
+          font-weight: 500;
+          color: var(--black);
+        }
+      }
+  
+      p {
+        font-size: 12px;
+        line-height: 16.8px;
+        font-weight: 400;
+        color: var(--black);
+        margin-bottom: 21px;
+  
+        &:last-child {
+          margin-bottom: 0px;
+        }
+  
+        b {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
