@@ -115,7 +115,9 @@ export default function ProjectDetail() {
               <MotionAnimate animation={'fade'}>
                 <div className={cls.infoRow}>
                   <div className={cls.infoRow_col}>
-                    <h3 className={index === 0 ? cls.topSection : ''}>{sectionItem.title}</h3>
+                    <MotionAnimate animation={'fadeInUp'}>
+                      <h3 className={index === 0 ? cls.topSection : ''}>{sectionItem.title}</h3>
+                    </MotionAnimate>
                   </div>
                   <div className={cls.infoRow_col}>
                     <h4 className={index === 0 ? cls.topSection : ''}>{sectionItem.description}</h4>
