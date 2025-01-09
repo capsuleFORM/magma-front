@@ -1,7 +1,40 @@
+.tabsBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 99px;
+  margin-top: 90px;
+  margin-bottom: 66px;
+
+  .tabsBlock_item {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    color: var(--black);
+    transition: all ease 0.3s;
+    opacity: 0.4;
+    cursor: pointer;
+
+    &.selected {
+      color: var(--orange);
+      opacity: 1;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
   row-gap: 20px;
   column-gap: 26px;
 
@@ -11,8 +44,9 @@
     transition: all ease 0.3s;
     cursor: pointer;
     text-decoration: none;
-    flex: 1 1 calc(33.333% - 20px);
+    flex: 1 1 calc(33.333% - 18px);
     box-sizing: border-box;
+    max-width: calc(33.333% - 18px);
 
     &.disabled {
       user-select: none;
@@ -29,7 +63,7 @@
     }
 
     @media (max-width: 1000px) {
-      flex: 1 1 calc(50% - 20px);
+      flex: 1 1 calc(50% - 18px);
     }
   
     @media (max-width: 600px) {

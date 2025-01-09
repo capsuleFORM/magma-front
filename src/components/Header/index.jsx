@@ -1,12 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import cls from "./styles.module.scss";
-import { globalsData } from "../../data/globals";
+//import { globalsData } from "../../data/globals";
 import Logo from "../../assets/logo.svg?react";
 import MenuBarsIcon from "../../assets/icons/menuBars.svg?react";
 import { useEffect, useState } from "react";
 
 export default function Header() {
-  const maxMobileWindowWidth = globalsData?.maxMobileWindowWidth || 1000;
+  //const maxMobileWindowWidth = globalsData?.maxMobileWindowWidth || 1000;
   const location = useLocation();
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 

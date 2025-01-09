@@ -299,7 +299,7 @@ export const projectsData = [
     title: 'SILVER FOUTAIN 108',
     descriptions: [],
     stats: {
-      category: 'Интерьер',
+      category: 'Коммерческий интерьер',
       location: '',
       year: 2023,
       stage: '',

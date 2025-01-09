@@ -4,7 +4,7 @@ import BaseLayout from "../layout/Base";
 // Pages
 import Home from "../pages/Home";
 import Projects from "../pages/Projects";
-//import ProjectDetail from "../pages/ProjectDetail";
+import ProjectDetail from "../pages/ProjectDetail";
 import Contacts from "../pages/Contacts";
 import About from "../pages/About";
 //import Services from "../pages/Services";
@@ -24,10 +24,10 @@ const Routes = [
         path: "/projects",
         element: <Projects />,
       },
-      // {
-      //   path: "/projects/:projectId",
-      //   element: <ProjectDetail />,
-      // },
+      {
+        path: "/projects/:projectId",
+        element: <ProjectDetail />,
+      },
       {
         path: "/about",
         element: <About />,

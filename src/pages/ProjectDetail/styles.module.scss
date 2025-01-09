@@ -1,0 +1,188 @@
+.projectDetail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .mainImage {
+    width: 100%;
+    height: auto;
+    margin-bottom: 52px;
+  }
+
+  h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 50%;
+    margin-left: 50%;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 42px;
+    color: var(--black);
+    margin-bottom: 24px;
+  }
+
+  .infoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .infoRow_col {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .statsTable {
+        display: inline-block;
+        gap: 17px;
+
+        p {
+          display: inline-block;
+          width: 50%;
+
+          &:first-child {
+            width: 190px;
+          }
+        }
+
+        .statsTable_item {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 16.8px;
+          color: var(--black);
+          margin-bottom: 17px;
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+
+          span {
+            opacity: 0.4;
+          }
+        }
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16.8px;
+        color: var(--black);
+        margin-bottom: 19px;
+
+        &:last-child {
+          margin-bottom: 50px;
+        }
+      }
+
+      .anchorsBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 130px;
+
+        .anchorsBlock_item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: start;
+          gap: 12px;
+          text-decoration: none;
+          color: var(--link-gray);
+          transition: all ease 0.3s;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+            padding-left: 7px;
+          }
+
+          .smallArrowIcon {
+            width: 9px;
+            height: 9px;
+          }
+
+          &.active {
+            color: var(--orange);
+            padding-left: 7px;
+
+            &:hover {
+              text-decoration: none;
+            }
+
+            .smallArrowIcon path {
+              fill: var(--orange);
+            }
+          }
+        }
+      }
+
+      .schemeImage {
+        margin-bottom: 50px;
+        transition: transform ease 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(0.98);
+        }
+      }
+
+      h3 {
+        font-size: 35px;
+        font-weight: 400;
+        color: var(--black);
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        margin-top: 65px;
+        margin-bottom: 50px;
+
+        &.topSection {
+          margin-top: 10px;
+        }
+      }
+
+      h4 {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16.8px;
+        color: var(--black);
+        margin-bottom: 50px;
+        margin-top: 70px;
+
+        &.topSection {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .imagesTable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 18px;
+
+    .imagesTable_image {
+      display: flex;
+      flex: 1 1 calc(33.333% - 12px);
+      max-width: calc(33.333% - 12px);
+      transition: transform ease 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(0.98);
+      }
+
+      &.fullWidth {
+        width: 100%;
+        flex: 1;
+        max-width: unset;
+      }
+    }
+  }
+}

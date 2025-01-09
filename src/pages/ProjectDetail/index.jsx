@@ -5,10 +5,27 @@ import { projectsData } from "../../data/projects";
 import SmallArrowRightIcon from "../../assets/icons/smallArrowRight.svg?react";
 import { MotionAnimate } from 'react-motion-animate';
 import { globalsData } from "../../data/globals";
+import ImageLightBoxModal from "../../components/ImageLightBoxModal";
+import { useState } from "react";
 
 export default function ProjectDetail() {
   let { projectId } = useParams();
   const currentProjectData = projectsData?.find(item => item.id === projectId);
+
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isImageLightBoxModalShowing, setIsImageLightBoxModalShowing] = useState(false);
+
+  const openImageLightBoxModal = (image) => {
+    setSelectedImage(image);
+    setIsImageLightBoxModalShowing(true);
+    document.querySelector('header').style.zIndex = '-1';
+  }
+
+  const closeImageLightBoxModal = () => {
+    setSelectedImage(null);
+    setIsImageLightBoxModalShowing(false);
+    document.querySelector('header').style.zIndex = '99';
+  }
 
   useMetaTags({
     title: `${globalsData?.siteTitlePrefix} ${currentProjectData?.title}`
@@ -30,26 +47,32 @@ export default function ProjectDetail() {
             <div className={cls.infoRow}>
               <div className={cls.infoRow_col}>
                 <div className={cls.statsTable}>
-                  <div className={cls.statsTable_item}>
-                    <span>Категория</span>
-                    {currentProjectData?.stats?.category}
-                  </div>
-                  <div className={cls.statsTable_item}>
-                    <span>Расположение</span>
-                    {currentProjectData?.stats?.location}
-                  </div>
-                  <div className={cls.statsTable_item}>
-                    <span>Год</span>
-                    {currentProjectData?.stats?.year}
-                  </div>
-                  <div className={cls.statsTable_item}>
-                    <span>Общая площадь</span>
-                    {currentProjectData?.stats?.square}
-                  </div>
-                  <div className={cls.statsTable_item}>
-                    <span>Стадия</span>
-                    {currentProjectData?.stats?.stage}
-                  </div>
+                  <p>
+                    <div className={cls.statsTable_item}>
+                      <span>Категория</span>
+                      {currentProjectData?.stats?.category}
+                    </div>
+                    <div className={cls.statsTable_item}>
+                      <span>Год</span>
+                      {currentProjectData?.stats?.year}
+                    </div>
+                  </p>
+                  <p>
+                    <div className={cls.statsTable_item}>
+                      <span>Расположение</span>
+                      {currentProjectData?.stats?.location}
+                    </div>
+                    <div className={cls.statsTable_item}>
+                      <span>Общая площадь</span>
+                      {currentProjectData?.stats?.square}
+                    </div>
+                  </p>
+                  <p>
+                    <div className={cls.statsTable_item}>
+                      <span>Стадия</span>
+                      {currentProjectData?.stats?.stage}
+                    </div>
+                  </p>
                 </div>
               </div>
               <div className={cls.infoRow_col}>
@@ -69,7 +92,8 @@ export default function ProjectDetail() {
                 <div className={cls.anchorsBlock}>
                   {currentProjectData?.sections?.map((sectionItem, index) => {
                     return (
-                      <Link key={index} className={cls.anchorsBlock_item} to={`/#${sectionItem.id}`}>
+                      <Link key={index} className={[cls.anchorsBlock_item, index === 0 && cls.active].join(' ')} 
+                        to={`/projects/${currentProjectData?.id}/#${sectionItem.id}`}>
                         <SmallArrowRightIcon className={cls.smallArrowIcon} />
                         {sectionItem.title}
                       </Link>
@@ -79,7 +103,8 @@ export default function ProjectDetail() {
               </div>
               <div className={cls.infoRow_col}>
                 <img title={'Планировка'} className={cls.schemeImage} 
-                  src={`/images/${currentProjectData.schemeImage}`} />
+                  src={`/images/${currentProjectData.schemeImage}`} 
+                  onClick={() => openImageLightBoxModal(`/images/${currentProjectData.schemeImage}`)}/>
               </div>
             </div>
           </MotionAnimate>
@@ -90,17 +115,18 @@ export default function ProjectDetail() {
               <MotionAnimate animation={'fade'}>
                 <div className={cls.infoRow}>
                   <div className={cls.infoRow_col}>
-                    <h3>{sectionItem.title}</h3>
+                    <h3 className={index === 0 ? cls.topSection : ''}>{sectionItem.title}</h3>
                   </div>
                   <div className={cls.infoRow_col}>
-                    <h4>{sectionItem.description}</h4>
+                    <h4 className={index === 0 ? cls.topSection : ''}>{sectionItem.description}</h4>
                   </div>
                 </div>
                 <div className={cls.imagesTable}>
                   {sectionItem.images.map((imageItem, imageIndex) => {
                     return (
                       <img key={imageIndex} className={[cls.imagesTable_image, imageItem.isFullWidth && cls.fullWidth].join(' ')} 
-                        title={imageItem.title} src={`/images/${imageItem.image}`} />
+                        title={imageItem.title} src={`/images/${imageItem.image}`} 
+                        onClick={() => openImageLightBoxModal(`/images/${imageItem.image}`)} />
                     )
                   })}
                 </div>
@@ -108,6 +134,9 @@ export default function ProjectDetail() {
             </section>
           )
         })}
+
+        <ImageLightBoxModal isShowing={isImageLightBoxModalShowing} image={selectedImage} 
+          handleCloseModal={() => closeImageLightBoxModal()} />
       </div>
   )
 }
