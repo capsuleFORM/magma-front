@@ -36,6 +36,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #root {
@@ -43,6 +44,7 @@
   flex-direction: column;
   min-height: 100vh;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -52,6 +54,7 @@ body {
   min-height: 100vh;
   padding: 0px 20px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 7px;

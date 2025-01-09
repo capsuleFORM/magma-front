@@ -58,8 +58,8 @@ export default function Footer() {
             <span>
               Cледующий проект
             </span>
-            <Link to={`/projects/${nextProjectData.id}`} className={cls.nextProject_link}>
-              {nextProjectData.title}
+            <Link to={`/projects/${nextProjectData?.id}`} className={cls.nextProject_link}>
+              {nextProjectData?.title}
               <ArrowRightIcon className={cls.arrowRightIcon} />
             </Link>
           </div>
