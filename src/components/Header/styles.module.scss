@@ -68,6 +68,12 @@
       padding-bottom: 38px;
       padding-top: 38px;
       visibility: hidden;
+
+      @media (max-width: 1440px) {
+        width: calc(100% - 20px + 1px);
+        padding-right: 20px;
+        margin-left: -1px;
+      }
   
       a {
         text-decoration: none;
