@@ -7,7 +7,7 @@ import Projects from "../pages/Projects";
 import ProjectDetail from "../pages/ProjectDetail";
 import Contacts from "../pages/Contacts";
 import About from "../pages/About";
-//import Services from "../pages/Services";
+import Services from "../pages/Services";
 import Errors from "../pages/Errors";
 
 const Routes = [
@@ -36,10 +36,10 @@ const Routes = [
         path: "/contacts",
         element: <Contacts />,
       },
-      // {
-      //   path: "/services",
-      //   element: <Services />,
-      // },
+      {
+        path: "/services",
+        element: <Services />,
+      },
     ],
   },
 ];

@@ -3,21 +3,25 @@ export const globalsData = {
   copyright: 'MAGMA Architecture',
   maxMobileWindowWidth: 1000,
   socials: [
-    {
-      title: 'Behance',
-      link: 'https://www.behance.net/'
-    },
+    // {
+    //   title: 'Behance',
+    //   link: 'https://www.behance.net/magmamoscow/'
+    // },
     {
       title: 'Instagram',
-      link: 'https://www.instagram.com/'
+      link: 'https://www.instagram.com/magma.architects?igshid=YmMyMTA2M2Y='
     },
+    // {
+    //   title: 'Whatsapp',
+    //   link: 'https://www.whatsapp.com/'
+    // },
     {
-      title: 'Whatsapp',
-      link: 'https://www.whatsapp.com/'
+      title: 'Telegram',
+      link: 'https://t.me/magmamoscow/'
     },
     {
       title: 'Pinterest',
-      link: 'https://pinterest.com/'
+      link: 'https://ru.pinterest.com/magmamoscow/'
     },
   ],
   contacts: {
