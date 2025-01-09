@@ -3,10 +3,11 @@ import cls from "./styles.module.scss";
 import { useMetaTags } from "react-metatags-hook";
 import { projectsData } from "../../data/projects";
 import SmallArrowRightIcon from "../../assets/icons/smallArrowRight.svg?react";
+import ArrowUpIcon from "../../assets/icons/arrowUp.svg?react";
 import { MotionAnimate } from 'react-motion-animate';
 import { globalsData } from "../../data/globals";
 import ImageLightBoxModal from "../../components/ImageLightBoxModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ProjectDetail() {
   let { projectId } = useParams();
@@ -14,6 +15,8 @@ export default function ProjectDetail() {
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [isImageLightBoxModalShowing, setIsImageLightBoxModalShowing] = useState(false);
+
+  const [isScrollToTopShowing, setIsScrollToTopShowing] = useState(false);
 
   const openImageLightBoxModal = (image) => {
     setSelectedImage(image);
@@ -30,6 +33,28 @@ export default function ProjectDetail() {
   useMetaTags({
     title: `${globalsData?.siteTitlePrefix} ${currentProjectData?.title}`
   });
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  const handleScroll = () => {
+    if (window.scrollY > 1000) {
+      setIsScrollToTopShowing(true);
+    } else {
+      setIsScrollToTopShowing(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
       <div className={cls.projectDetail}>
@@ -136,6 +161,10 @@ export default function ProjectDetail() {
             </section>
           )
         })}
+
+        <div className={[cls.scrollToTopButton, isScrollToTopShowing && cls.showing].join(' ')} onClick={() => scrollToTop()}>
+          <ArrowUpIcon className={cls.scrollToTopIcon} />
+        </div>
 
         <ImageLightBoxModal isShowing={isImageLightBoxModalShowing} image={selectedImage} 
           handleCloseModal={() => closeImageLightBoxModal()} />

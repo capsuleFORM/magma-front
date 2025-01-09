@@ -185,4 +185,31 @@
       }
     }
   }
+
+  .scrollToTopButton {
+    position: fixed;
+    bottom: 30vh;
+    right: 13vw;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    opacity: 0;
+    pointer-events: none;
+
+    &.showing {
+      opacity: 0.8;
+      pointer-events: all;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
