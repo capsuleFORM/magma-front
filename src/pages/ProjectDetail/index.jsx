@@ -25,7 +25,6 @@ export default function ProjectDetail() {
   }
 
   const closeImageLightBoxModal = () => {
-    setSelectedImage(null);
     setIsImageLightBoxModalShowing(false);
     document.querySelector('header').style.zIndex = '99';
   }
@@ -127,9 +126,11 @@ export default function ProjectDetail() {
                 </div>
               </div>
               <div className={cls.infoRow_col}>
-                <img title={'Планировка'} className={cls.schemeImage} 
-                  src={`/images/${currentProjectData.schemeImage}`} 
-                  onClick={() => openImageLightBoxModal(`/images/${currentProjectData.schemeImage}`)}/>
+                <MotionAnimate animation={'fade'}>
+                  <img title={'Планировка'} className={cls.schemeImage} 
+                    src={`/images/${currentProjectData.schemeImage}`} 
+                    onClick={() => openImageLightBoxModal(`/images/${currentProjectData.schemeImage}`)}/>
+                </MotionAnimate>
               </div>
             </div>
           </MotionAnimate>
@@ -151,9 +152,12 @@ export default function ProjectDetail() {
                 <div className={cls.imagesTable}>
                   {sectionItem.images.map((imageItem, imageIndex) => {
                     return (
-                      <img key={imageIndex} className={[cls.imagesTable_image, imageItem.isFullWidth && cls.fullWidth].join(' ')} 
-                        title={imageItem.title} src={`/images/${imageItem.image}`} 
-                        onClick={() => openImageLightBoxModal(`/images/${imageItem.image}`)} />
+                      <div key={imageIndex} className={[cls.imagesTable_image, imageItem.isFullWidth && cls.fullWidth].join(' ')}>
+                        <MotionAnimate animation={'fade'}>
+                          <img title={imageItem.title} src={`/images/${imageItem.image}`} 
+                            onClick={() => openImageLightBoxModal(`/images/${imageItem.image}`)} />
+                        </MotionAnimate>
+                      </div>
                     )
                   })}
                 </div>
@@ -162,8 +166,10 @@ export default function ProjectDetail() {
           )
         })}
 
-        <div className={[cls.scrollToTopButton, isScrollToTopShowing && cls.showing].join(' ')} onClick={() => scrollToTop()}>
-          <ArrowUpIcon className={cls.scrollToTopIcon} />
+        <div className={[cls.scrollToTopBlock, isScrollToTopShowing && cls.showing].join(' ')}>
+          <div className={cls.scrollToTopBlock_button} onClick={() => scrollToTop()}>
+            <ArrowUpIcon className={cls.scrollToTopIcon} />
+          </div>
         </div>
 
         <ImageLightBoxModal isShowing={isImageLightBoxModalShowing} image={selectedImage} 
