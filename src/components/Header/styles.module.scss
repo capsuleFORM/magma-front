@@ -51,69 +51,80 @@
       }
     }
 
-    .menu {
-      background: var(--white);
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      justify-content: start;
-      gap: 15px;
-      transition: all ease-in-out 0.3s;
-      z-index: -1;
-      position: absolute;
+    .menuBlock {
+      position: fixed;
+      left: 0px;
+      top: 0px;
       width: 100%;
-      max-width: 1440px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
       transform: translateY(-200px);
+      transition: all ease-in-out 0.3s;
       opacity: 0;
-      padding-bottom: 38px;
-      padding-top: 38px;
       visibility: hidden;
+      z-index: -1;
+      padding-left: 30px;
+      padding-right: 30px;
+      background: var(--white);
+      background-color: var(--white);
 
-      @media (max-width: 1440px) {
-        width: calc(100% - 20px + 1px);
-        padding-right: 20px;
-        margin-left: -1px;
+      @media (max-width: 800px) {
+        padding-left: 15px;
+        padding-right: 15px;
       }
-  
-      a {
-        text-decoration: none;
-        transition: opacity ease 0.3s;
-        cursor: pointer;
-        text-transform: uppercase;
-        opacity: 0;
-        font-weight: 400;
-        font-size: 27px;
-        line-height: 32.2px;
-        color: var(--black);
-        position: relative;
 
-        &::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height: 1px;
-          background: var(--black);
-          transform: scaleX(0);
-          transition: transform 0.3s ease;
-        }
-  
-        &:hover::after {
-          transform: scaleX(1);
-        }
-      }
-  
       &.opened {
-        transform: translateY(150px);
+        transform: translateY(60px);
         opacity: 1;
         visibility: visible;
+        z-index: 10;
 
-        a {
+        .menuBlock_content a {
           opacity: 1;
+        }
+      }
+
+      .menuBlock_content {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: start;
+        gap: 15px;
+        width: 100%;
+        max-width: 1440px;
+        padding-bottom: 38px;
+        padding-top: 38px;
+    
+        a {
+          text-decoration: none;
+          transition: opacity ease 0.3s;
+          cursor: pointer;
+          text-transform: uppercase;
+          opacity: 0;
+          font-weight: 400;
+          font-size: 27px;
+          line-height: 32.2px;
+          color: var(--black);
+          position: relative;
+  
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--black);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+          }
+    
+          &:hover::after {
+            transform: scaleX(1);
+          }
         }
       }
     }
   }
-
 }

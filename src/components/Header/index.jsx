@@ -21,19 +21,21 @@ export default function Header() {
           <Logo className={cls.logo} />
         </Link>
         <MenuBarsIcon onClick={() => setIsMenuOpened(!isMenuOpened)} className={[cls.menuBarsIcon, isMenuOpened && cls.animateToCross].join(' ')}/>
-        <div className={[cls.menu, isMenuOpened && cls.opened].join(' ')}>
-          <Link to={'/projects'}>
-            Проекты
-          </Link>
-          <Link to={'/about'}>
-            О бюро
-          </Link>
-          <Link to={'/services'}>
-            Услуги
-          </Link>
-          <Link to={'/contacts'}>
-            Контакты
-          </Link>
+        <div className={[cls.menuBlock, isMenuOpened && cls.opened].join(' ')}>
+          <div className={cls.menuBlock_content}>
+            <Link to={'/projects'}>
+              Проекты
+            </Link>
+            <Link to={'/about'}>
+              О бюро
+            </Link>
+            <Link to={'/services'}>
+              Услуги
+            </Link>
+            <Link to={'/contacts'}>
+              Контакты
+            </Link>
+          </div>
         </div>
       </div>
     </header>
