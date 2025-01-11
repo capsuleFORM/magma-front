@@ -18,7 +18,7 @@
     max-width: 1440px;
 
     .logo {
-      width: 76px;
+      width: 85px;
       height: auto;
       transition: all ease 0.3s;
       cursor: pointer;
@@ -39,8 +39,8 @@
       }
 
       &.animateToCross {
-        width: 20px;
-        height: 20px;
+        width: 23px;
+        height: 23px;
 
         path:nth-child(1) {
           transform: translateY(14.5px) translate(-2px) rotate(-45deg);

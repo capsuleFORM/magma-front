@@ -27,7 +27,7 @@
     }
 
     &:hover {
-      text-decoration: underline;
+      color: var(--black);
     }
   }
 }
@@ -36,8 +36,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  row-gap: 20px;
+  row-gap: 30px;
   column-gap: 26px;
+  margin-bottom: 90px;
 
   .projectCard {
     display: flex;
@@ -80,11 +81,11 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      margin-top: 12px;
+      margin-top: 18px;
 
       span {
         font-weight: 400;
-        font-size: 12px;
+        font-size: 17px;
         line-height: 16.8px;
         color: var(--black);
 
@@ -97,10 +98,11 @@
 
     .projectCard_subtitle {
       font-weight: 300;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 16.8px;
       color: var(--black);
       opacity: 0.4;
+      margin-top: 4px;
     }
   }
 }

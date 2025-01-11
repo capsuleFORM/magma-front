@@ -8,18 +8,17 @@
   .content {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
     width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 120px;
+    padding-bottom: 50px;
     max-width: 1440px;
 
     .copyrght {
       color: var(--dark-gray);
       font-weight: 300;
-      font-size: 12px;
-      line-height: 13.2px;
+      font-size: 18px;
     }
   
     .socials {
@@ -33,8 +32,7 @@
         text-decoration: none;
         color: var(--black);
         font-weight: 400;
-        font-size: 12px;
-        line-height: 16.8px;
+        font-size: 18px;
         transition: all ease 0.3s;
         cursor: pointer;
   
@@ -48,10 +46,11 @@
       display: flex;
       flex-direction: column;
       align-items: end;
-      gap: 9px;
+      justify-content: end;
+      gap: 13px;
 
       span {
-        font-size: 12px;
+        font-size: 18px;
         font-weight: 400;
         line-height: 16.8px;
         color: var(--black);

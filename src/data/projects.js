@@ -27,67 +27,67 @@ export const projectsData = [
           в обеденной группе и TV-зоне подчеркивая целостность идеи.`,
         images: [
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '1-1.png',
             isFullWidth: true,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '21-2.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '22-2.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '35-2.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '6-6.png',
             isFullWidth: true,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '18-2.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '30-1.jpg',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '23-1.jpg',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '4-1.png',
             isFullWidth: true,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '25-1.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '27-3.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '24-3.jpg',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер кухня-гостиной',
+            title: 'Интерьер кухня-гостиной',
             image: '9-5.png',
             isFullWidth: true,
           },
@@ -100,22 +100,22 @@ export const projectsData = [
           где хочется расслабиться, замедлиться и быть в настоящем моменте.`,
         images: [
           {
-            title: 'Итерьер террасы',
+            title: 'Интерьер террасы',
             image: '15-4.png',
             isFullWidth: true,
           },
           {
-            title: 'Итерьер террасы',
+            title: 'Интерьер террасы',
             image: '32-4.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер террасы',
+            title: 'Интерьер террасы',
             image: '16-3.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер террасы',
+            title: 'Интерьер террасы',
             image: '31-3.png',
             isFullWidth: false,
           },
@@ -129,37 +129,37 @@ export const projectsData = [
           гардеробное хранение для двух человек, разместить отдельный кабинет и дополнительное рабочее место.`,
         images: [
           {
-            title: 'Итерьер мастер-спальни',
+            title: 'Интерьер мастер-спальни',
             image: '1-2.png',
             isFullWidth: true,
           },
           {
-            title: 'Итерьер мастер-спальни',
+            title: 'Интерьер мастер-спальни',
             image: '6-2.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер мастер-спальни',
+            title: 'Интерьер мастер-спальни',
             image: '10-2.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер мастер-спальни',
+            title: 'Интерьер мастер-спальни',
             image: '9-2.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер мастер-спальни',
+            title: 'Интерьер мастер-спальни',
             image: '24-1.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер мастер-спальни',
+            title: 'Интерьер мастер-спальни',
             image: '22-22.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер мастер-спальни',
+            title: 'Интерьер мастер-спальни',
             image: '7-1.png',
             isFullWidth: false,
           },
@@ -171,22 +171,22 @@ export const projectsData = [
         description: ``,
         images: [
           {
-            title: 'Итерьер мастер-санузла',
+            title: 'Интерьер мастер-санузла',
             image: '38.png',
             isFullWidth: true,
           },
           {
-            title: 'Итерьер мастер-санузла',
+            title: 'Интерьер мастер-санузла',
             image: '13-3.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер мастер-санузла',
+            title: 'Интерьер мастер-санузла',
             image: '29-3.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер мастер-санузла',
+            title: 'Интерьер мастер-санузла',
             image: '14-2.png',
             isFullWidth: false,
           },
@@ -198,22 +198,22 @@ export const projectsData = [
         description: ``,
         images: [
           {
-            title: 'Итерьер кабинета',
+            title: 'Интерьер кабинета',
             image: '42.png',
             isFullWidth: true,
           },
           {
-            title: 'Итерьер кабинета',
+            title: 'Интерьер кабинета',
             image: '16-1.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер кабинета',
+            title: 'Интерьер кабинета',
             image: '32-2.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер кабинета',
+            title: 'Интерьер кабинета',
             image: '31-1.png',
             isFullWidth: false,
           },
@@ -226,22 +226,22 @@ export const projectsData = [
           содержащее элементы, характерные для современных гостиничных интерьеров, не теряя при этом атмосферу домашнего тепла и уюта.`,
         images: [
           {
-            title: 'Итерьер гостевой спальни',
+            title: 'Интерьер гостевой спальни',
             image: '1-7.png',
             isFullWidth: true,
           },
           {
-            title: 'Итерьер гостевой спальни',
+            title: 'Интерьер гостевой спальни',
             image: '3-6.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер гостевой спальни',
+            title: 'Интерьер гостевой спальни',
             image: '9-3.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер гостевой спальни',
+            title: 'Интерьер гостевой спальни',
             image: '7-2.png',
             isFullWidth: false,
           },
@@ -253,22 +253,22 @@ export const projectsData = [
         description: ``,
         images: [
           {
-            title: 'Итерьер гостевого санузла',
+            title: 'Интерьер гостевого санузла',
             image: '7.png',
             isFullWidth: true,
           },
           {
-            title: 'Итерьер гостевого санузла',
+            title: 'Интерьер гостевого санузла',
             image: '4-3.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер гостевого санузла',
+            title: 'Интерьер гостевого санузла',
             image: '2-22.png',
             isFullWidth: false,
           },
           {
-            title: 'Итерьер гостевого санузла',
+            title: 'Интерьер гостевого санузла',
             image: '1-10.png',
             isFullWidth: false,
           },
