@@ -24,6 +24,16 @@
     transition: all ease 0.3s;
     height: auto;
     width: auto;
+    padding: 15vw;
+    cursor: pointer;
+
+    @media (max-width: 1440px) {
+      padding: 0px 300px;
+    }
+
+    @media (max-width: 800px) {
+      padding: 5px;
+    }
 
     &.showing {
       opacity: 1;
@@ -55,18 +65,12 @@
     }
 
     .imageLightBoxModalImage {
-      width: auto;
+      max-height: 85vh;
+      min-height: unset;
+      width: 100%;
       height: auto;
-      min-height: 80vh;
-      max-height: 88vh;
-      max-width: 1440px;
+      max-width: unset;
       display: inline-block;
-      object-fit: cover;
-      object-position: center;
-
-      @media (max-width: 1440px) {
-        max-height: 75vh;
-      }
     }
   }
 

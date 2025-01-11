@@ -7,6 +7,10 @@
     width: 100%;
     height: auto;
     margin-bottom: 70px;
+
+    @media (max-width: 800px) {
+      margin-bottom: 35px;
+    }
   }
 
   h1 {
@@ -20,6 +24,11 @@
     line-height: 42px;
     color: var(--black);
     margin-bottom: 24px;
+
+    @media (max-width: 800px) {
+      width: 100%;
+      margin-left: 0px;
+    }
   }
 
   .infoRow {
@@ -27,6 +36,14 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+
+      &.topRow {
+        flex-direction: column-reverse;
+      }
+    }
 
     .infoRow_col {
       display: flex;
@@ -37,13 +54,26 @@
         display: inline-block;
         gap: 17px;
 
+        @media (max-width: 800px) {
+          display: inline-flex;
+          justify-content: space-between;
+        }
+
         p {
           display: inline-block;
           width: 50%;
           margin-bottom: 35px;
 
+          @media (max-width: 800px) {
+            width: auto;
+          }
+
           &:first-child {
             width: 220px;
+
+            @media (max-width: 800px) {
+              width: auto;
+            }
           }
         }
 
@@ -76,6 +106,10 @@
 
         &:last-child {
           margin-bottom: 70px;
+
+          @media (max-width: 800px) {
+            margin-bottom: 35px;
+          }
         }
       }
 
@@ -84,6 +118,28 @@
         flex-direction: column;
         gap: 12px;
         margin-top: 130px;
+
+        @media (max-width: 800px) {
+          margin-top: 36px;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 11px;
+        }
+
+        .anchorsBlock_mobileTitle {
+          display: none;
+          font-size: 25px;
+          font-weight: 500;
+          line-height: 30px;
+          text-align: left;
+          color: var(--black);
+          margin-bottom: 24px;
+
+          @media (max-width: 800px) {
+            display: block;
+          }
+        }
 
         .anchorsBlock_item {
           display: flex;
@@ -97,6 +153,10 @@
           cursor: pointer;
           font-weight: 500;
           font-size: 17px;
+
+          @media (max-width: 800px) {
+            flex: 1 1 calc(50% - 10px);
+          }
 
           .smallArrowIcon {
             width: 15px;
@@ -117,6 +177,11 @@
       .schemeImage {
         margin-bottom: 70px;
         cursor: pointer;
+
+        @media (max-width: 800px) {
+          margin-top: 29px;
+          margin-bottom: 36px;
+        }
       }
 
       h3 {
@@ -128,6 +193,10 @@
         align-items: start;
         margin-top: 65px;
         margin-bottom: 50px;
+
+        @media (max-width: 800px) {
+          margin-bottom: 20px;
+        }
 
         &.topSection {
           margin-top: 10px;
@@ -141,6 +210,11 @@
         color: var(--black);
         margin-bottom: 60px;
         margin-top: 70px;
+
+        @media (max-width: 800px) {
+          margin-top: 20px;
+          margin-bottom: 30px;
+        }
 
         &.topSection {
           margin-top: 10px;
@@ -161,6 +235,11 @@
       flex: 1 1 calc(33.333% - 12px);
       max-width: calc(33.333% - 12px);
       cursor: pointer;
+
+      @media (max-width: 600px) {
+        flex: 1 1 100%;
+        max-width: unset;
+      }
 
       &.fullWidth {
         width: 100% !important;

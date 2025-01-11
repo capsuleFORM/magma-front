@@ -2,7 +2,7 @@ import cls from "./styles.module.scss";
 import { useMetaTags } from "react-metatags-hook";
 import { globalsData } from "../../data/globals";
 import { MotionAnimate } from "react-motion-animate";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { servicesData } from "../../data/services";
 
 export default function Services() {
@@ -10,19 +10,39 @@ export default function Services() {
     title: `${globalsData?.siteTitlePrefix} Услуги`
   });
 
+  const maxMobileWindowWidth = globalsData?.maxMobileWindowWidth || 1000;
+
   const uniqueCategories = [...new Set(servicesData?.map(item => item.title))];
-  const [selectedCategory, setSelectedCategory] = useState(uniqueCategories[0]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const [isContentShowing, setIsContentShowing] = useState(true);
 
   const handleChangeCategory = (category) => {
-    setIsContentShowing(false);
-    setTimeout(() => {
-      setSelectedCategory(category);
-      setIsContentShowing(true);
-    }, 250)
+    if (category !== selectedCategory) {
+      setIsContentShowing(false);
+      if (window.innerWidth < maxMobileWindowWidth) {
+        const contentBlockElement = document.querySelector('#servicesBlock');
+        const selectedCategoryElement = document.querySelector(`#categoryBlock_${category.replace(/\s+/g, '')}`);
+        selectedCategoryElement.insertAdjacentElement('afterend', contentBlockElement);
 
+        setTimeout(() => {
+          setSelectedCategory(category);
+          setIsContentShowing(true);
+        }, 150)
+      } else {
+        setTimeout(() => {
+          setSelectedCategory(category);
+          setIsContentShowing(true);
+        }, 250)
+      }
+      
+    }
   };
+
+  useEffect(() => {
+    handleChangeCategory(uniqueCategories[0]);
+  }, [])
+  
 
   return (
     <section>
@@ -30,14 +50,18 @@ export default function Services() {
         <div className={cls.tabsBlock}>
           {uniqueCategories?.map((category, index) => {
             return (
-              <div key={index} className={[cls.tabsBlock_item, selectedCategory === category && cls.selected].join(' ')} 
+              <div key={index} id={`categoryBlock_${category.replace(/\s+/g, '')}`} 
+                className={[cls.tabsBlock_item, selectedCategory === category && cls.selected].join(' ')} 
                 onClick={() => handleChangeCategory(category)}>
-                {category}
+                <span>
+                  {category}
+                </span>
+                <span>{selectedCategory === category ? '–' : '+'}</span>
               </div>
             )
           })}
         </div>
-        <div className={[cls.servicesBlock, isContentShowing && cls.showing].join(' ')}>
+        <div id="servicesBlock" className={[cls.servicesBlock, isContentShowing && cls.showing].join(' ')}>
           {servicesData?.find(item => item.title === selectedCategory)?.sections?.map((sectionItem, index) => {
             return (
               <div key={index} className={cls.servicesBlock_item}>

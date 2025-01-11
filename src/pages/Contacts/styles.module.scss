@@ -13,6 +13,11 @@
     align-items: start;
     width: 100%;
 
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+
     .infoBlock {
       display: flex;
       flex-direction: column;
@@ -30,6 +35,12 @@
         flex-direction: row;
         justify-content: end;
         gap: 90px;
+
+        @media (max-width: 800px) {
+          justify-content: space-between;
+          flex-direction: column;
+          gap: 40px;
+        }
       }
   
       h1 {

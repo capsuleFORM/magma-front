@@ -12,6 +12,11 @@
     flex-direction: row;
     align-items: start;
 
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+
     .infoBlock {
       display: flex;
       flex-direction: column;
@@ -36,8 +41,8 @@
       }
   
       p {
-        font-size: 12px;
-        line-height: 16.8px;
+        font-size: 18px;
+        line-height: 24px;
         font-weight: 400;
         color: var(--black);
         margin-bottom: 21px;
