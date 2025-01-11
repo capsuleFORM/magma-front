@@ -17,17 +17,18 @@
     cursor: pointer;
     text-transform: uppercase;
 
+    &:hover {
+      opacity: 1;
+    }
+
     &.selected {
       color: var(--orange);
       opacity: 1;
 
       &:hover {
         text-decoration: none;
+        color: var(--orange);
       }
-    }
-
-    &:hover {
-      color: var(--black);
     }
   }
 }

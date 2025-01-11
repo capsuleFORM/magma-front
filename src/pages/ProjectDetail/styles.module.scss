@@ -40,6 +40,7 @@
         p {
           display: inline-block;
           width: 50%;
+          margin-bottom: 35px;
 
           &:first-child {
             width: 220px;
@@ -134,9 +135,9 @@
       }
 
       h4 {
-        font-size: 12px;
+        font-size: 17px;
         font-weight: 500;
-        line-height: 16.8px;
+        line-height: 24px;
         color: var(--black);
         margin-bottom: 60px;
         margin-top: 70px;

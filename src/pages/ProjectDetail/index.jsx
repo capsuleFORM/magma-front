@@ -88,7 +88,7 @@ export default function ProjectDetail() {
                     </div>
                     <div className={cls.statsTable_item}>
                       <span>Общая площадь</span>
-                      {currentProjectData?.stats?.square}
+                      {currentProjectData?.stats?.square} м²
                     </div>
                   </p>
                   <p>

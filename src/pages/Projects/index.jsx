@@ -33,19 +33,21 @@ export default function Projects() {
               return (
                 <Link key={index} className={[cls.projectCard, !projectItem.stats.year && cls.disabled].join(' ')} 
                   to={`/projects/${projectItem.id}`}>
-                  <img title={projectItem.title} src={`/images/${projectItem.smallImage}`}/>
-                  <MotionAnimate animation={'fadeInUp'}>
-                    <div className={cls.projectCard_title}>
-                      <span>
-                        {projectItem.title}
-                      </span>
-                      <span>
-                        {projectItem.stats.year ? projectItem.stats.year : 'SOON'}
-                      </span>
-                    </div>
-                    <div className={cls.projectCard_subtitle}>
-                      {projectItem.stats.category}
-                    </div>
+                  <MotionAnimate animation={'fade'}>
+                    <img title={projectItem.title} src={`/images/${projectItem.smallImage}`}/>
+                    <MotionAnimate animation={'fadeInUp'}>
+                      <div className={cls.projectCard_title}>
+                        <span>
+                          {projectItem.title}
+                        </span>
+                        <span>
+                          {projectItem.stats.year ? projectItem.stats.year : 'SOON'}
+                        </span>
+                      </div>
+                      <div className={cls.projectCard_subtitle}>
+                        {projectItem.stats.category}
+                      </div>
+                    </MotionAnimate>
                   </MotionAnimate>
                 </Link>
               )

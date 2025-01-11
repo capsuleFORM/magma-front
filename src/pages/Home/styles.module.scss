@@ -1,49 +1,17 @@
 .home {
+  overflow: hidden;
+
   .slider {
     
-
     .slider_slide {
-      height: 812px;
-
-      @media (max-width: 1400px) {
-        height: 805px;
-      }
-
-      @media (max-width: 1280px) {
-        height: 63vw;
-      }
+      height: calc(100vh - 137px - 75px);
     
       img {
         width: 100%;
-        height: auto;
-        max-height: 770px;
+        height: calc(100vh - 137px - 75px);
         overflow: hidden;
-      }
-    }
-  }
-
-  .slider_controls {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    .slider_button {
-      background: var(--white);
-      outline: none;
-      border: none;
-      cursor: pointer;
-      width: auto;
-      height: 18px;
-
-      .arrowButton {
-        transition: all ease 0.3s;
-      }
-
-      &:hover {
-        .arrowButton path {
-          stroke-width: 1;
-        }
+        object-position: center;
+        object-fit: cover;
       }
     }
   }

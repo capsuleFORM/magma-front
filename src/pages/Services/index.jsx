@@ -13,6 +13,17 @@ export default function Services() {
   const uniqueCategories = [...new Set(servicesData?.map(item => item.title))];
   const [selectedCategory, setSelectedCategory] = useState(uniqueCategories[0]);
 
+  const [isContentShowing, setIsContentShowing] = useState(true);
+
+  const handleChangeCategory = (category) => {
+    setIsContentShowing(false);
+    setTimeout(() => {
+      setSelectedCategory(category);
+      setIsContentShowing(true);
+    }, 250)
+
+  };
+
   return (
     <section>
       <MotionAnimate animation={'fade'}>
@@ -20,13 +31,13 @@ export default function Services() {
           {uniqueCategories?.map((category, index) => {
             return (
               <div key={index} className={[cls.tabsBlock_item, selectedCategory === category && cls.selected].join(' ')} 
-                onClick={() => setSelectedCategory(category)}>
+                onClick={() => handleChangeCategory(category)}>
                 {category}
               </div>
             )
           })}
         </div>
-        <div className={cls.servicesBlock}>
+        <div className={[cls.servicesBlock, isContentShowing && cls.showing].join(' ')}>
           {servicesData?.find(item => item.title === selectedCategory)?.sections?.map((sectionItem, index) => {
             return (
               <div key={index} className={cls.servicesBlock_item}>

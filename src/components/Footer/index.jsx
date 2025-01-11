@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link, useParams } from "react-router-dom";
 import cls from "./styles.module.scss";
 import { globalsData } from "../../data/globals";
@@ -5,7 +6,7 @@ import ArrowRightIcon from "../../assets/icons/nextProjectArrow.svg?react";
 import { projectsData } from "../../data/projects";
 import { useEffect, useState } from "react";
 
-export default function Footer() {
+export default function Footer({isHomePage = false}) {
   const currentYear = new Date().getFullYear();
   const maxMobileWindowWidth = globalsData?.maxMobileWindowWidth || 1000;
   let { projectId } = useParams();
@@ -39,7 +40,7 @@ export default function Footer() {
 
   return (
     <footer className={cls.footer}>
-      <div className={cls.content}>
+      <div className={[cls.content, isHomePage && cls.homePaddings].join(' ')}>
         <div className={cls.copyrght}>
           © {currentYear} {globalsData?.copyright}
         </div>

@@ -2,11 +2,9 @@ import { Link } from "react-router-dom";
 import cls from "./styles.module.scss";
 import { useMetaTags } from "react-metatags-hook";
 import { globalsData } from "../../data/globals";
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { projectsData } from "../../data/projects";
-import ArrowLeftIcon from "../../assets/icons/arrowLeft.svg?react";
-import ArrowRightIcon from "../../assets/icons/arrowRight.svg?react";
 import { MotionAnimate } from 'react-motion-animate';
 
 export default function Home() {
@@ -38,14 +36,6 @@ export default function Home() {
                 }
               })}
             </Slider>
-            <div className={cls.slider_controls}>
-              <ButtonBack className={cls.slider_button}>
-                <ArrowLeftIcon className={cls.arrowButton} />
-              </ButtonBack>
-              <ButtonNext className={cls.slider_button}>
-                <ArrowRightIcon className={cls.arrowButton} />
-              </ButtonNext>
-            </div>
           </CarouselProvider>
         </MotionAnimate>
       </div>

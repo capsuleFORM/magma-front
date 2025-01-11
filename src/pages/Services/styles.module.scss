@@ -17,17 +17,18 @@
     cursor: pointer;
     text-transform: uppercase;
 
+    &:hover {
+      opacity: 1;
+    }
+
     &.selected {
       color: var(--orange);
       opacity: 1;
 
       &:hover {
         text-decoration: none;
+        color: var(--orange);
       }
-    }
-
-    &:hover {
-      color: var(--black);
     }
   }
 }
@@ -38,6 +39,12 @@
   gap: 63px;
   width: 100%;
   margin-bottom: 66px;
+  opacity: 0;
+  transition: all ease 0.25s;
+
+  &.showing {
+    opacity: 1;
+  }
 
   .servicesBlock_item {
     display: flex;
