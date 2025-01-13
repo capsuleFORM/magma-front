@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import cls from "./styles.module.scss";
 import { globalsData } from "../../data/globals";
 import ArrowRightIcon from "../../assets/icons/nextProjectArrow.svg?react";
+import SmallArrowRightIcon from "../../assets/icons/smallArrowRight.svg?react";
 import { projectsData } from "../../data/projects";
 import { useEffect, useState } from "react";
 
@@ -40,7 +41,7 @@ export default function Footer({isHomePage = false}) {
 
   return (
     <footer className={cls.footer}>
-      <div className={[cls.content, isHomePage && cls.homePaddings].join(' ')}>
+      <div className={[cls.content, isHomePage && cls.homePaddings, projectId && cls.projectDetailPaddings].join(' ')}>
         <div className={cls.copyrght}>
           © {currentYear} {globalsData?.copyright}
         </div>
@@ -61,7 +62,11 @@ export default function Footer({isHomePage = false}) {
             </span>
             <Link to={`/projects/${nextProjectData?.id}`} className={cls.nextProject_link}>
               {nextProjectData?.title}
-              <ArrowRightIcon className={cls.arrowRightIcon} />
+              {window.innerWidth < maxMobileWindowWidth ? (
+                <SmallArrowRightIcon className={cls.arrowRightIcon} />
+              ) : (
+                <ArrowRightIcon className={cls.arrowRightIcon} />
+              )}
             </Link>
           </div>
         )}

@@ -5,54 +5,183 @@
   justify-content: space-between;
   height: auto;
   width: 100%;
-  margin-top: 150px;
 
   .content {
     display: flex;
-    flex-direction: row;
-    align-items: start;
+    flex-direction: column;
+    gap: 90px;
 
-    @media (max-width: 800px) {
-      flex-direction: column;
-      gap: 50px;
+    @media (max-width: 1000px) {
+      gap: 56px;
     }
 
-    .infoBlock {
+    @media (max-width: 800px) {
+      gap: 24px;
+    }
+
+    .infoRow {
       display: flex;
-      flex-direction: column;
-      align-items: start;
-      justify-content: end;
-      flex: 1;
-  
-      &:first-child {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 96px;
+
+      @media (max-width: 1000px) {
+        gap: 56px;
+      }
+
+      @media (max-width: 800px) {
+        flex-direction: column-reverse;
+        gap: 70px;
+      }
+
+      .infoBlock {
+        display: flex;
+        flex-direction: column;
         align-items: start;
-      }
-  
-      h1 {
-        font-size: 30px;
-        line-height: 42px;
-        font-weight: 400;
-        color: var(--gray);
-  
-        span {
-          font-weight: 500;
+        justify-content: start;
+        flex: 1;
+        gap: 60px;
+
+        @media (max-width: 1440px) {
+          gap: 30px;
+        }
+
+        @media (max-width: 1000px) {
+          gap: 25px;
+        }
+
+        @media (max-width: 800px) {
+          gap: 24px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+
+          @media (max-width: 800px) {
+            display: none;
+          }
+        }
+
+        .mobileMainImage {
+          width: 100%;
+          height: auto;
+          display: none;
+
+          @media (max-width: 800px) {
+            display: block;
+          }
+        }
+
+        h1 {
+          font-size: 35px;
+          line-height: 49px;
+          font-weight: 400;
           color: var(--black);
+
+          @media (max-width: 1000px) {
+            font-size: 30px;
+            line-height: 42px;
+          }
+
+          @media (max-width: 800px) {
+            font-size: 33px;
+            line-height: 46.2px;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 25.2px;
+          font-weight: 400;
+          color: var(--black);
+          margin-bottom: 25px;
+
+          @media (max-width: 1000px) {
+            font-size: 13px;
+            line-height: 18.2px;
+          }
+
+          @media (max-width: 800px) {
+            font-size: 16px;
+            line-height: 22.4px;
+          }
+    
+          &:last-child {
+            margin-bottom: 0px;
+          }
+    
+          b {
+            font-weight: 500;
+          }
         }
       }
-  
-      p {
-        font-size: 18px;
-        line-height: 24px;
-        font-weight: 400;
-        color: var(--black);
-        margin-bottom: 21px;
-  
-        &:last-child {
-          margin-bottom: 0px;
+
+      .partners {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 90px;
+
+        @media (max-width: 800px) {
+          margin-bottom: 100px;
+          flex-direction: column;
+          height: auto;
+          gap: 46px;
         }
-  
-        b {
-          font-weight: 500;
+
+        .partners_row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: start;
+          height: auto;
+
+          .partners_logoMobile {
+            &.ardoLogo {
+              width: 122px;
+            }
+            &.centrSvetLogo {
+              width: 186px;
+            }
+            &.formLogo {
+              width: 137px;
+            }
+            &.homeArtLogo {
+              width: 174px;
+            }
+
+            @media (max-width: 376px) {
+              &.ardoLogo {
+                width: 105px;
+              }
+              &.centrSvetLogo {
+                width: 160px;
+              }
+              &.formLogo {
+                width: 118px;
+              }
+              &.homeArtLogo {
+                width: 150px;
+              }
+            }
+          }
+        }
+
+        .partners_logo {
+          &:nth-child(1) {
+            width: 153px;
+          }
+          &:nth-child(2) {
+            width: 261px;
+          }
+          &:nth-child(3) {
+            width: 218px;
+          }
+          &:nth-child(4) {
+            width: 171px;
+          }
         }
       }
     }

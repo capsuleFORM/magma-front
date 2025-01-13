@@ -111,7 +111,7 @@ export default function ProjectDetail() {
             </div>
           </MotionAnimate>
           <MotionAnimate animation={'fade'}>
-            <div className={cls.infoRow}>
+            <div className={[cls.infoRow, cls.mobileSchemeBlock].join(' ')}>
               <div className={cls.infoRow_col}>
                 <div className={cls.anchorsBlock}>
                   {currentProjectData?.sections?.map((sectionItem, index) => {

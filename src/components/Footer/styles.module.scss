@@ -20,10 +20,24 @@
       padding-top: 24px;
     }
 
+    &.projectDetailPaddings {
+      padding-top: 100px;
+    }
+
     .copyrght {
       color: var(--dark-gray);
       font-weight: 300;
       font-size: 18px;
+
+      @media (max-width: 800px) {
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      @media (max-width: 375px) {
+        font-weight: 400;
+        font-size: 14px;
+      }
     }
   
     .socials {
@@ -41,6 +55,14 @@
         transition: all ease 0.3s;
         cursor: pointer;
         position: relative;
+
+        @media (max-width: 800px) {
+          font-size: 16px;
+        }
+
+        @media (max-width: 375px) {
+          font-size: 14px;
+        }
 
         &::after {
           content: '';
@@ -73,6 +95,10 @@
         line-height: 16.8px;
         color: var(--black);
         opacity: 0.4;
+
+        @media (max-width: 800px) {
+          display: none;
+        }
       }
 
       .nextProject_link {
@@ -95,6 +121,15 @@
         @media (max-width: 800px) {
           margin-right: 0px;
           padding-bottom: 2px;
+          font-size: 16px;
+          line-height: 17.6px;
+          opacity: 1;
+          gap: 8px;
+        }
+        
+        @media (max-width: 375px) {
+          padding-bottom: 0px;
+          font-size: 14px;
         }
 
         &:hover {
@@ -107,14 +142,15 @@
           width: 24px;
 
           @media (max-width: 800px) {
-            width: 31px;
+            width: 12px;
+            margin-top: -2px;
           }
 
           & path {
             fill: var(--orange);
 
             @media (max-width: 800px) {
-              stroke: var(--black);
+              fill: var(--black);
             }
           }
         }

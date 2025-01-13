@@ -1,6 +1,6 @@
 export const globalsData = {
   siteTitlePrefix: 'MAGMA –',
-  copyright: 'MAGMA Architecture',
+  copyright: 'MAGMA Architects',
   maxMobileWindowWidth: 800,
   socials: [
     // {
