@@ -21,20 +21,10 @@ export default function Projects() {
   const handleChangeCategory = (category) => {
     if (category !== selectedCategory) {
       setIsContentShowing(false);
-      if (window.innerWidth < maxMobileWindowWidth) {
-        const contentBlockElement = document.querySelector('#projectsBlock');
-        const selectedCategoryElement = document.querySelector(`#categoryBlock_${category.replace(/\s+/g, '')}`);
-        selectedCategoryElement.insertAdjacentElement('afterend', contentBlockElement);
-        setTimeout(() => {
-          setSelectedCategory(category);
-          setIsContentShowing(true);
-        }, 150)
-      } else {
-        setTimeout(() => {
-          setSelectedCategory(category);
-          setIsContentShowing(true);
-        }, 250)
-      }    
+      setTimeout(() => {
+        setSelectedCategory(category);
+        setIsContentShowing(true);
+      }, 250)
     }
   };
   
@@ -44,49 +34,84 @@ export default function Projects() {
 
   return (
     <section>
-      <MotionAnimate animation={'fade'}>
-        <div className={cls.tabsBlock}>
-          {uniqueCategories?.map((category, index) => {
-            return (
-              <div key={index} id={`categoryBlock_${category.replace(/\s+/g, '')}`} 
-                className={[cls.tabsBlock_item, selectedCategory === category && cls.selected].join(' ')} 
-                onClick={() => handleChangeCategory(category)}>
-                <span>
-                  {category}
-                </span>
-                <span>{selectedCategory === category ? '–' : '+'}</span>
-              </div>
-            )
-          })}
-        </div>
-        <div id="projectsBlock" className={[cls.projects, isContentShowing && cls.showing].join(' ')}>
-          {projectsData?.map((projectItem, index) => {
-            if (projectItem.active && projectItem.stats.category === selectedCategory) {
+      {window.innerWidth > maxMobileWindowWidth ? (
+        <MotionAnimate animation={'fade'}>
+          <div className={cls.tabsBlock}>
+            {uniqueCategories?.map((category, index) => {
               return (
-                <Link key={index} className={[cls.projectCard, !projectItem.stats.year && cls.disabled].join(' ')} 
-                  to={`/projects/${projectItem.id}`}>
-                  <MotionAnimate animation={'fade'}>
-                    <img title={projectItem.title} src={`/images/${projectItem.smallImage}`}/>
-                    <MotionAnimate animation={'fadeInUp'}>
-                      <div className={cls.projectCard_title}>
-                        <span>
-                          {projectItem.title}
-                        </span>
-                        <span>
-                          {projectItem.stats.year ? projectItem.stats.year : 'SOON'}
-                        </span>
-                      </div>
-                      <div className={cls.projectCard_subtitle}>
-                        {projectItem.stats.category}
-                      </div>
-                    </MotionAnimate>
-                  </MotionAnimate>
-                </Link>
+                <div key={index} className={[cls.tabsBlock_item, selectedCategory === category && cls.selected].join(' ')} 
+                  onClick={() => handleChangeCategory(category)}>
+                  <span>
+                    {category}
+                  </span>
+                </div>
               )
-            }
-          })}
-        </div>
-      </MotionAnimate>
+            })}
+          </div>
+          <div className={[cls.projects, isContentShowing && cls.showing].join(' ')}>
+            {projectsData?.map((projectItem, index) => {
+              if (projectItem.active && projectItem.stats.category === selectedCategory) {
+                return (
+                  <Link key={index} className={[cls.projectCard, !projectItem.stats.year && cls.disabled].join(' ')} 
+                    to={`/projects/${projectItem.id}`}>
+                    <MotionAnimate animation={'fade'}>
+                      <img title={projectItem.title} src={`/images/${projectItem.smallImage}`}/>
+                      <MotionAnimate animation={'fadeInUp'}>
+                        <div className={cls.projectCard_title}>
+                          <span>
+                            {projectItem.title}
+                          </span>
+                          <span>
+                            {projectItem.stats.year ? projectItem.stats.year : 'SOON'}
+                          </span>
+                        </div>
+                        <div className={cls.projectCard_subtitle}>
+                          {projectItem.stats.category}
+                        </div>
+                      </MotionAnimate>
+                    </MotionAnimate>
+                  </Link>
+                )
+              }
+            })}
+          </div>
+        </MotionAnimate>
+      ) : (
+        uniqueCategories?.map((category, categoryIndex) => {
+          return (
+            <MotionAnimate key={categoryIndex} animation={'fade'}>
+              <h2>{category}</h2>
+              <div className={[cls.projects, isContentShowing && cls.showing].join(' ')}>
+                {projectsData?.map((projectItem, projectItemIndex) => {
+                  if (projectItem.active && projectItem.stats.category === category) {
+                    return (
+                      <Link key={projectItemIndex} className={[cls.projectCard, !projectItem.stats.year && cls.disabled].join(' ')} 
+                        to={`/projects/${projectItem.id}`}>
+                        <MotionAnimate animation={'fade'}>
+                          <img title={projectItem.title} src={`/images/${projectItem.smallImage}`}/>
+                          <MotionAnimate animation={'fadeInUp'}>
+                            <div className={cls.projectCard_title}>
+                              <span>
+                                {projectItem.title}
+                              </span>
+                              <span>
+                                {projectItem.stats.year ? projectItem.stats.year : 'SOON'}
+                              </span>
+                            </div>
+                            <div className={cls.projectCard_subtitle}>
+                              {projectItem.stats.category}
+                            </div>
+                          </MotionAnimate>
+                        </MotionAnimate>
+                      </Link>
+                    )
+                  }
+                })}
+              </div>
+            </MotionAnimate>
+          )
+        })
+      )}
     </section>
   )
 }

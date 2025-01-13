@@ -127,20 +127,6 @@
           gap: 11px;
         }
 
-        .anchorsBlock_mobileTitle {
-          display: none;
-          font-size: 25px;
-          font-weight: 500;
-          line-height: 30px;
-          text-align: left;
-          color: var(--black);
-          margin-bottom: 24px;
-
-          @media (max-width: 800px) {
-            display: block;
-          }
-        }
-
         .anchorsBlock_item {
           display: flex;
           flex-direction: row;
@@ -169,6 +155,15 @@
 
             .smallArrowIcon path {
               fill: var(--orange);
+            }
+
+            @media (max-width: 800px) {
+              color: var(--link-gray);
+              padding-left: 0px;
+
+              .smallArrowIcon path {
+                fill: rgb(102, 102, 102);
+              }
             }
           }
         }
@@ -260,11 +255,15 @@
     pointer-events: none;
     position: fixed;
     bottom: 20vh;
-    padding: 0 50px;
+    padding: 0 20px;
     max-width: 1440px;
 
-    @media (max-width: 1480px) {
+    @media (max-width: 1600px) {
       padding: 0 95px;
+    }
+
+    @media (max-width: 800px) {
+      padding: 0 30px;
     }
 
     &.showing {

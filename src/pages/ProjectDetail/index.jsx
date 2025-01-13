@@ -114,9 +114,6 @@ export default function ProjectDetail() {
             <div className={cls.infoRow}>
               <div className={cls.infoRow_col}>
                 <div className={cls.anchorsBlock}>
-                  <div className={cls.anchorsBlock_mobileTitle}>
-                    {currentProjectData?.title} делится на следующие функциональные зоны:
-                  </div>
                   {currentProjectData?.sections?.map((sectionItem, index) => {
                     return (
                       <Link key={index} className={[cls.anchorsBlock_item, index === 0 && cls.active].join(' ')} 

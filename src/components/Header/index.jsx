@@ -14,13 +14,29 @@ export default function Header() {
     setIsMenuOpened(false);
   }, [location]);
 
+  useEffect(() => {
+    if (isMenuOpened) {
+      document.documentElement.style.overflowY = 'hidden';
+    } else {
+      document.documentElement.style.overflowY = 'auto';
+    }
+
+    return () => {
+      document.documentElement.style.overflowY = 'auto';
+    };
+  }, [isMenuOpened]);
+
+  const toggleMenu = () => {
+    setIsMenuOpened(prev => !prev);
+  };
+
   return (
     <header className={cls.header}>
       <div className={cls.content}>
         <Link to={'/'}>
           <Logo className={cls.logo} />
         </Link>
-        <MenuBarsIcon onClick={() => setIsMenuOpened(!isMenuOpened)} className={[cls.menuBarsIcon, isMenuOpened && cls.animateToCross].join(' ')}/>
+        <MenuBarsIcon onClick={() => toggleMenu()} className={[cls.menuBarsIcon, isMenuOpened && cls.animateToCross].join(' ')}/>
         <div className={[cls.menuBlock, isMenuOpened && cls.opened].join(' ')}>
           <div className={cls.menuBlock_content}>
             <Link to={'/projects'}>
