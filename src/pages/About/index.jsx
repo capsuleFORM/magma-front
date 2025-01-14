@@ -6,6 +6,7 @@ import ArdoLogo from "../../assets/partners/ardo.svg?react";
 import CentrSvetLogo from "../../assets/partners/centrsvet.svg?react";
 import FormLogo from "../../assets/partners/form.svg?react";
 import HomeArtLogo from "../../assets/partners/homeart.svg?react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   useMetaTags({
@@ -51,20 +52,36 @@ export default function About() {
             {window.innerWidth < 900 ? (
               <div className={cls.partners}>
                 <div className={cls.partners_row}>
-                  <HomeArtLogo className={[cls.partners_logoMobile, cls.homeArtLogo].join(' ')} />
-                  <FormLogo className={[cls.partners_logoMobile, cls.formLogo].join(' ')} />
+                  <Link to="https://homeart.pro/" content="nofollow">
+                    <HomeArtLogo className={[cls.partners_logoMobile, cls.homeArtLogo].join(' ')} />
+                  </Link>
+                  <Link to="https://form.moscow/" content="nofollow">
+                    <FormLogo className={[cls.partners_logoMobile, cls.formLogo].join(' ')} />
+                  </Link>
                 </div>
                 <div className={cls.partners_row}>
-                  <CentrSvetLogo className={[cls.partners_logoMobile, cls.centrSvetLogo].join(' ')} />
-                  <ArdoLogo className={[cls.partners_logoMobile, cls.ardoLogo].join(' ')} />
+                  <Link to="https://www.centersvet.ru/" content="nofollow">
+                    <CentrSvetLogo className={[cls.partners_logoMobile, cls.centrSvetLogo].join(' ')} />
+                  </Link>
+                  <Link to="https://www.studioardo.ru/" content="nofollow">
+                    <ArdoLogo className={[cls.partners_logoMobile, cls.ardoLogo].join(' ')} />
+                  </Link>
                 </div>
               </div>
             ) : (
               <div className={cls.partners}>
-                <ArdoLogo className={[cls.partners_logo, cls.ardoLogo].join(' ')} />
-                <CentrSvetLogo className={[cls.partners_logo, cls.centrSvetLogo].join(' ')} />
-                <FormLogo className={[cls.partners_logo, cls.formLogo].join(' ')} />
-                <HomeArtLogo className={[cls.partners_logo, cls.homeArtLogo].join(' ')} />
+                <Link to="https://www.studioardo.ru/" content="nofollow">
+                  <ArdoLogo className={[cls.partners_logo, cls.ardoLogo].join(' ')} />
+                </Link>
+                <Link to="https://www.centersvet.ru/" content="nofollow">
+                  <CentrSvetLogo className={[cls.partners_logo, cls.centrSvetLogo].join(' ')} />
+                </Link>
+                <Link to="https://form.moscow/" content="nofollow">
+                  <FormLogo className={[cls.partners_logo, cls.formLogo].join(' ')} />
+                </Link>
+                <Link to="https://homeart.pro/" content="nofollow">
+                  <HomeArtLogo className={[cls.partners_logo, cls.homeArtLogo].join(' ')} />
+                </Link>
               </div>
             )}
           </div>

@@ -3,8 +3,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 90px;
-  margin-bottom: 66px;
+  margin-top: 74px;
+  margin-bottom: 46px;
 
   @media (max-width: 800px) {
     width: 100%;
@@ -12,7 +12,6 @@
     justify-content: start;
     align-items: start;
     gap: 28px;
-    margin-top: 74px;
   }
 
   .tabsBlock_item {

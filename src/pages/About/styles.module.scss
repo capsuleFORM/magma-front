@@ -138,6 +138,10 @@
           align-items: start;
           height: auto;
 
+          a {
+            display: flex;
+          }
+
           .partners_logoMobile {
             &.ardoLogo {
               width: 122px;
@@ -170,6 +174,9 @@
         }
 
         .partners_logo {
+          transition: all ease 0.3s;
+          cursor: pointer;
+
           &:nth-child(1) {
             width: 153px;
           }
@@ -181,6 +188,12 @@
           }
           &:nth-child(4) {
             width: 171px;
+          }
+
+          &:hover {
+            path {
+              fill: var(--black);
+            }
           }
         }
       }
