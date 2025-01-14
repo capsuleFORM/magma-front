@@ -32,13 +32,6 @@
       }
     }
 
-    span:last-child {
-      display: none;
-      font-size: 40px;
-      line-height: 44px;
-      color: #333333;
-    }
-
     @media (max-width: 800px) {
       display: flex;
       flex-direction: row;
