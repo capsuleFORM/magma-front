@@ -11,8 +11,6 @@ export default function Projects() {
     title: `${globalsData?.siteTitlePrefix} Проекты`
   });
 
-  const maxMobileWindowWidth = globalsData?.maxMobileWindowWidth || 1000;
-
   const uniqueCategories = [...new Set(projectsData?.map(item => item.stats.category))];
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -45,7 +43,7 @@ export default function Projects() {
 
   return (
     <section>
-      {windowWidth > maxMobileWindowWidth ? (
+      {windowWidth > 800 ? (
         <MotionAnimate animation={'fade'}>
           <div className={cls.tabsBlock}>
             {uniqueCategories?.map((category, index) => {

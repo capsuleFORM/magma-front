@@ -10,8 +10,6 @@ export default function Services() {
     title: `${globalsData?.siteTitlePrefix} Услуги`
   });
 
-  const maxMobileWindowWidth = globalsData?.maxMobileWindowWidth || 1000;
-
   const uniqueCategories = [...new Set(servicesData?.map(item => item.title))];
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -20,7 +18,7 @@ export default function Services() {
   const handleChangeCategory = (category) => {
     if (category !== selectedCategory) {
       setIsContentShowing(false);
-      if (windowWidth < maxMobileWindowWidth) {
+      if (windowWidth < 800) {
         const contentBlockElement = document.querySelector('#servicesBlock');
         const selectedCategoryElement = document.querySelector(`#categoryBlock_${category.replace(/\s+/g, '')}`);
         selectedCategoryElement.insertAdjacentElement('afterend', contentBlockElement);

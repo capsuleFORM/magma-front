@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 export default function Footer({isHomePage = false}) {
   const currentYear = new Date().getFullYear();
-  const maxMobileWindowWidth = globalsData?.maxMobileWindowWidth || 1000;
+  const maxMobileWindowWidth = globalsData?.maxMobileWindowWidth || 800;
   let { projectId } = useParams();
   const [nextProjectData, setNextProjectData] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
