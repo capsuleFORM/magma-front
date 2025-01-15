@@ -14,13 +14,13 @@ export default function Services() {
 
   const uniqueCategories = [...new Set(servicesData?.map(item => item.title))];
   const [selectedCategory, setSelectedCategory] = useState(null);
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isContentShowing, setIsContentShowing] = useState(true);
 
   const handleChangeCategory = (category) => {
     if (category !== selectedCategory) {
       setIsContentShowing(false);
-      if (window.innerWidth < maxMobileWindowWidth) {
+      if (windowWidth < maxMobileWindowWidth) {
         const contentBlockElement = document.querySelector('#servicesBlock');
         const selectedCategoryElement = document.querySelector(`#categoryBlock_${category.replace(/\s+/g, '')}`);
         selectedCategoryElement.insertAdjacentElement('afterend', contentBlockElement);
@@ -43,6 +43,16 @@ export default function Services() {
     handleChangeCategory(uniqueCategories[0]);
   }, [])
   
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <section>

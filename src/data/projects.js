@@ -16,7 +16,7 @@ export const projectsData = [
       stage: 'Реализация',
       square: '200',
     },
-    schemeImage: 'CR260-2-1.jpg',
+    schemeImage: 'CP260.svg',
     mainImage: '2-2.png',
     smallImage: '17-5.jpg',
     sections: [

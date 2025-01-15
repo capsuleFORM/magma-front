@@ -15,7 +15,7 @@ export default function Projects() {
 
   const uniqueCategories = [...new Set(projectsData?.map(item => item.stats.category))];
   const [selectedCategory, setSelectedCategory] = useState(null);
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isContentShowing, setIsContentShowing] = useState(true);
 
   const handleChangeCategory = (category) => {
@@ -32,9 +32,20 @@ export default function Projects() {
     handleChangeCategory(uniqueCategories[0]);
   }, [])
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <section>
-      {window.innerWidth > maxMobileWindowWidth ? (
+      {windowWidth > maxMobileWindowWidth ? (
         <MotionAnimate animation={'fade'}>
           <div className={cls.tabsBlock}>
             {uniqueCategories?.map((category, index) => {

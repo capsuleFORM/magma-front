@@ -12,14 +12,26 @@ export default function Footer({isHomePage = false}) {
   const maxMobileWindowWidth = globalsData?.maxMobileWindowWidth || 1000;
   let { projectId } = useParams();
   const [nextProjectData, setNextProjectData] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const limitStringLength = (string = '') => {
-    if (window.innerWidth < maxMobileWindowWidth) {
+    if (windowWidth < maxMobileWindowWidth) {
       return string.substring(0, 2);
     } else {
       return string;
     }
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const getRandomDifferentProject = (currentProjectId) => {
     if (currentProjectId) {
@@ -62,7 +74,7 @@ export default function Footer({isHomePage = false}) {
             </span>
             <Link to={`/projects/${nextProjectData?.id}`} className={cls.nextProject_link}>
               {nextProjectData?.title}
-              {window.innerWidth < maxMobileWindowWidth ? (
+              {windowWidth < maxMobileWindowWidth ? (
                 <SmallArrowRightIcon className={cls.arrowRightIcon} />
               ) : (
                 <ArrowRightIcon className={cls.arrowRightIcon} />
