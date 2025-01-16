@@ -21,7 +21,7 @@ export default function Home() {
             naturalSlideHeight={125}
             isPlaying={true}
             infinite={true}
-            totalSlides={3}
+            totalSlides={projectsData?.length - 1}
           >
             <Slider className={cls.slider}>
               {projectsData?.map((projectItem, index) => {
@@ -29,7 +29,7 @@ export default function Home() {
                   return (
                     <Slide key={index} index={index} className={cls.slider_slide} style={{paddingBottom: '0px'}}>
                       <Link to={`/projects/${projectItem.id}`}>
-                        <img title={projectItem.title} src={`/images/${projectItem.mainImage}`} />
+                        <img title={projectItem.title} src={`/images/projects/${projectItem.id}/${projectItem.mainImage}`} />
                       </Link>
                     </Slide>
                   )
