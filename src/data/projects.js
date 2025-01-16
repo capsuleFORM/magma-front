@@ -974,7 +974,6 @@ export const projectsData = [
       },
     ]
   },
-
   {
     id: 'novgorodskaya-65',
     order: 195,
@@ -1080,25 +1079,489 @@ export const projectsData = [
       },
     ]
   },
-
   {
-    id: 'primepark-205',
-    order: 100,
-    active: false,
-    title: 'PRIMEPARK 205',
+    id: 'primepark-210',
+    order: 194,
+    active: true,
+    title: 'PRIMEPARK 210',
     descriptions: [],
     stats: {
       category: 'Интерьер',
-      location: '',
+      location: 'г. Москва',
       year: 2022,
-      stage: '',
-      square: '',
+      stage: 'Реализован',
+      square: '210',
     },
-    schemeImage: '',
-    mainImage: '5.png',
-    smallImage: '21-3.jpg',
-    sections: [],
+    schemeImage: 'PP-210.svg',
+    mainImage: '1.png',
+    smallImage: 'PP-210.png',
+    sections: [
+      {
+        title: 'Гостиная',
+        id: 'gostinnaya',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер гостинной',
+            image: '2.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер гостинной',
+            image: '3.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостинной',
+            image: '4.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостинной',
+            image: '5.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер гостинной',
+            image: '6.jpg',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостинной',
+            image: '7.jpg',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостинной',
+            image: '8.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер гостинной',
+            image: '9.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостинной',
+            image: '10.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Кухня',
+        id: 'kuhnya',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер кухни',
+            image: '11.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер кухни',
+            image: '12.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухни',
+            image: '13.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухни',
+            image: '14.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухни',
+            image: '15.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Холл',
+        id: 'holl',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер холла',
+            image: '16.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер холла',
+            image: '17.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер холла',
+            image: '18.jpg',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер холла',
+            image: '19.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Мастер спальня',
+        id: 'master_spalnya',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер мастер спальни',
+            image: '20.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер мастер спальни',
+            image: '21.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер спальни',
+            image: '22.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер спальни',
+            image: '23.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер мастер спальни',
+            image: '24.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер спальни',
+            image: '25.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Мастер санузел',
+        id: 'master_sanuzel',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер мастер санузла',
+            image: '26.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер мастер санузла',
+            image: '27.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер санузла',
+            image: '28.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер санузла',
+            image: '29.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер санузла',
+            image: '30.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Гостевая спальня',
+        id: 'gostevaya_spalnya',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер гостевой спальни',
+            image: '31.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер гостевой спальни',
+            image: '32.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевой спальни',
+            image: '33.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевой спальни',
+            image: '34.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевой спальни',
+            image: '35.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Гостевой санузел',
+        id: 'gostevoy_sanuzel',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер гостевого санузла',
+            image: '36.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевого санузла',
+            image: '37.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевого санузла',
+            image: '38.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевого санузла',
+            image: '39.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Постирочная',
+        id: 'postirochnaya',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер постирочной',
+            image: '40.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер постирочной',
+            image: '41.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер постирочной',
+            image: '42.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер постирочной',
+            image: '43.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+    ],
   },
+
+  {
+    id: 'como-penthouse-260',
+    order: 193,
+    active: true,
+    title: 'COMO PENTHOUSE 260',
+    descriptions: [],
+    stats: {
+      category: 'Интерьер',
+      location: 'г. Будва',
+      year: 2021,
+      stage: 'Реализован',
+      square: '260',
+    },
+    schemeImage: 'CP-260.svg',
+    mainImage: '1.png',
+    smallImage: 'CP-260.png',
+    sections: [
+      {
+        title: 'Кухня-гостиная',
+        id: 'kuhnya-gostinnaya',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер кухни-гостинной',
+            image: '2.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер кухни-гостинной',
+            image: '3.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухни-гостинной',
+            image: '4.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухни-гостинной',
+            image: '5.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер кухни-гостинной',
+            image: '6.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухни-гостинной',
+            image: '7.jpg',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухни-гостинной',
+            image: '8.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер кухни-гостинной',
+            image: '9.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухни-гостинной',
+            image: '10.jpg',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухни-гостинной',
+            image: '11.png',
+            isFullWidth: true,
+          },
+        ]
+      },
+      {
+        title: 'Терраса',
+        id: 'terrasa',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер террасы',
+            image: '12.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер террасы',
+            image: '13.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер террасы',
+            image: '14.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Мастер-спальня',
+        id: 'master-spalnya',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер мастер-спальни',
+            image: '15.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер мастер-спальни',
+            image: '16.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер-спальни',
+            image: '17.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер-спальни',
+            image: '18.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер-спальни',
+            image: '19.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Мастер-санузел',
+        id: 'master-sanuzel',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер мастер-санузла',
+            image: '20.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер мастер-санузла',
+            image: '21.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер-санузла',
+            image: '22.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Кабинет',
+        id: 'kabinet',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер кабинета',
+            image: '23.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер кабинета',
+            image: '24.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кабинета',
+            image: '25.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Гостевой санузел',
+        id: 'gostevoy_sanuzel',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер гостевого санузла',
+            image: '26.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер гостевого санузла',
+            image: '27.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевого санузла',
+            image: '28.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+    ]
+  },
+
   {
     id: 'silver-foutain-65',
     order: 100,
@@ -1115,24 +1578,6 @@ export const projectsData = [
     schemeImage: '',
     mainImage: '',
     smallImage: '015-1.jpg',
-    sections: [],
-  },
-  {
-    id: 'neva-50',
-    order: 100,
-    active: false,
-    title: 'NEVA 50',
-    descriptions: [],
-    stats: {
-      category: 'Интерьер',
-      location: '',
-      year: null,
-      stage: '',
-      square: '',
-    },
-    schemeImage: '',
-    mainImage: '',
-    smallImage: '17-6.jpg',
     sections: [],
   },
 ]
