@@ -350,19 +350,24 @@
       display: flex;
       flex: 1 1 calc(33.333% - 12px);
       max-width: calc(33.333% - 12px);
+      max-width: none;
       cursor: pointer;
-
-      @media (max-width: 600px) {
-        flex: 1 1 100%;
-        max-width: unset;
-      }
 
       &.fullWidth {
         width: 100% !important;
         flex: 1 1 auto;
-        max-width: unset;
+        max-width: none;
+      }
+
+      &.twoInRow {
+        min-width: calc(50% - 12px);
+        max-width: none;
       }
       
+      @media (max-width: 600px) {
+        flex: 1 1 100%;
+        max-width: unset;
+      }
     }
   }
 

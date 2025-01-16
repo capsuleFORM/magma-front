@@ -152,7 +152,8 @@ export default function ProjectDetail() {
                 <div className={cls.imagesTable}>
                   {sectionItem.images.map((imageItem, imageIndex) => {
                     return (
-                      <div key={imageIndex} className={[cls.imagesTable_image, imageItem.isFullWidth && cls.fullWidth].join(' ')}>
+                      <div key={imageIndex} className={[cls.imagesTable_image, imageItem.isFullWidth && cls.fullWidth, 
+                        (sectionItem.imagesInRow < 3 && !imageItem.isFullWidth) && cls.twoInRow].join(' ')}>
                         <MotionAnimate animation={'fade'}>
                           <img title={imageItem.title} src={`/images/projects/${projectId}/${imageItem.image}`} 
                             onClick={() => openImageLightBoxModal(`/images/projects/${projectId}/${imageItem.image}`)} />

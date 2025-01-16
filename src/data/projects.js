@@ -2,7 +2,7 @@ export const projectsData = [
   {
     id: 'como-penthouse-200',
     order: 200,
-    active: true,
+    active: false,
     title: 'COMO PENTHOUSE 200',
     descriptions: [
       `Будва — одно из самых древних поселений на берегу Адриатического моря. Como Penthouse находится в жилом комплексе Tron Como Residence.
@@ -24,6 +24,7 @@ export const projectsData = [
       {
         title: 'Кухня-гостиная',
         id: 'kuhnya-gostinnaya',
+        imagesInRow: 2,
         description: `Кухонный остров служит своего рода центральной осью пространства. Строгие линии и фактура натурального камня придают острову монументальный характер. Каменные элементы повторяются
           в обеденной группе и TV-зоне подчеркивая целостность идеи.`,
         images: [
@@ -97,6 +98,7 @@ export const projectsData = [
       {
         title: 'Терраса',
         id: 'terrasa',
+        imagesInRow: 2,
         description: `Продолжением гостиной зоны является просторная терраса с потрясающим видом на море. Это место, где господствует ощущение безмятежности,
           где хочется расслабиться, замедлиться и быть в настоящем моменте.`,
         images: [
@@ -125,6 +127,7 @@ export const projectsData = [
       {
         title: 'Мастер-спальня',
         id: 'master-spalnya',
+        imagesInRow: 2,
         description: `Работая над мастер зоной в нашем распоряжении была небольшая площадь и множество функциональных задач: 
           визуально расширить пространство и открыть вид из ванной комнаты на море и горы за счет стеклянной стены, организовать полноценное 
           гардеробное хранение для двух человек, разместить отдельный кабинет и дополнительное рабочее место.`,
@@ -169,6 +172,7 @@ export const projectsData = [
       {
         title: 'Мастер-санузел',
         id: 'master-sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -196,6 +200,7 @@ export const projectsData = [
       {
         title: 'Кабинет',
         id: 'kabinet',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -223,6 +228,7 @@ export const projectsData = [
       {
         title: 'Гостевая спальня',
         id: 'gostevaya_spalnya',
+        imagesInRow: 2,
         description: `Вдохновленные образом жизни семьи, их частыми путешествиями, мы создали жилое пространство, 
           содержащее элементы, характерные для современных гостиничных интерьеров, не теряя при этом атмосферу домашнего тепла и уюта.`,
         images: [
@@ -251,6 +257,7 @@ export const projectsData = [
       {
         title: 'Гостевой санузел',
         id: 'gostevoy_sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -297,6 +304,7 @@ export const projectsData = [
       {
         title: 'Кухня-гостиная',
         id: 'kuhnya-gostinnaya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -369,6 +377,7 @@ export const projectsData = [
       {
         title: 'Санузел',
         id: 'sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -401,6 +410,7 @@ export const projectsData = [
       {
         title: 'Спальня',
         id: 'spalnya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -442,6 +452,7 @@ export const projectsData = [
       {
         title: 'Кухня-гостиная',
         id: 'kuhnya-gostinnaya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -489,6 +500,7 @@ export const projectsData = [
       {
         title: 'Холл',
         id: 'holl',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -516,6 +528,7 @@ export const projectsData = [
       {
         title: 'Спальня',
         id: 'spalnya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -553,6 +566,7 @@ export const projectsData = [
       {
         title: 'Санузел',
         id: 'sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -580,6 +594,7 @@ export const projectsData = [
       {
         title: 'Постирочная',
         id: 'postirochnaya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -616,6 +631,7 @@ export const projectsData = [
       {
         title: 'Кухня-гостиная',
         id: 'kuhnya-gostinnaya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -653,6 +669,7 @@ export const projectsData = [
       {
         title: 'Мастер спальня',
         id: 'master_spalnya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -685,6 +702,7 @@ export const projectsData = [
       {
         title: 'Мастер санузел',
         id: 'master_sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -712,6 +730,7 @@ export const projectsData = [
       {
         title: 'Гостевая спальня',
         id: 'gostevaya_spalnya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -739,6 +758,7 @@ export const projectsData = [
       {
         title: 'Гостевой санузел',
         id: 'gostevoy_sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -785,6 +805,7 @@ export const projectsData = [
       {
         title: 'Кухня-гостиная',
         id: 'kuhnya-gostinnaya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -852,6 +873,7 @@ export const projectsData = [
       {
         title: 'Мастер спальня',
         id: 'master_spalnya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -889,6 +911,7 @@ export const projectsData = [
       {
         title: 'Мастер санузел',
         id: 'master_sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -916,6 +939,7 @@ export const projectsData = [
       {
         title: 'Детская спальня',
         id: 'detskaya_spalnya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -948,6 +972,7 @@ export const projectsData = [
       {
         title: 'Детский санузел',
         id: 'detskiy_sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -994,6 +1019,7 @@ export const projectsData = [
       {
         title: 'Гостиная',
         id: 'gostinnaya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1031,6 +1057,7 @@ export const projectsData = [
       {
         title: 'Холл',
         id: 'holl',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1048,6 +1075,7 @@ export const projectsData = [
       {
         title: 'Кухня',
         id: 'kuhnya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1099,6 +1127,7 @@ export const projectsData = [
       {
         title: 'Гостиная',
         id: 'gostinnaya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1151,6 +1180,7 @@ export const projectsData = [
       {
         title: 'Кухня',
         id: 'kuhnya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1183,6 +1213,7 @@ export const projectsData = [
       {
         title: 'Холл',
         id: 'holl',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1210,6 +1241,7 @@ export const projectsData = [
       {
         title: 'Мастер спальня',
         id: 'master_spalnya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1247,6 +1279,7 @@ export const projectsData = [
       {
         title: 'Мастер санузел',
         id: 'master_sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1279,6 +1312,7 @@ export const projectsData = [
       {
         title: 'Гостевая спальня',
         id: 'gostevaya_spalnya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1311,6 +1345,7 @@ export const projectsData = [
       {
         title: 'Гостевой санузел',
         id: 'gostevoy_sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1338,6 +1373,7 @@ export const projectsData = [
       {
         title: 'Постирочная',
         id: 'postirochnaya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1384,6 +1420,7 @@ export const projectsData = [
       {
         title: 'Кухня-гостиная',
         id: 'kuhnya-gostinnaya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1441,6 +1478,7 @@ export const projectsData = [
       {
         title: 'Терраса',
         id: 'terrasa',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1463,6 +1501,7 @@ export const projectsData = [
       {
         title: 'Мастер-спальня',
         id: 'master-spalnya',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1495,6 +1534,7 @@ export const projectsData = [
       {
         title: 'Мастер-санузел',
         id: 'master-sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1517,6 +1557,7 @@ export const projectsData = [
       {
         title: 'Кабинет',
         id: 'kabinet',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1539,6 +1580,7 @@ export const projectsData = [
       {
         title: 'Гостевой санузел',
         id: 'gostevoy_sanuzel',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
@@ -1585,6 +1627,7 @@ export const projectsData = [
       {
         title: 'Кухня-гостиная',
         id: 'kuhnya-gostinnaya',
+        imagesInRow: 2,
         description: `Просторная кухня-гостиная занимает центральное место в квартире и разделяет в диаметральные стороны два спальных блока: 
           мастер зону и универсальную комнату, которая, в зависимости от потребностей конечного покупателя, может быть детской, кабинетом или гостевой спальней.`,
         images: [
@@ -1643,6 +1686,7 @@ export const projectsData = [
       {
         title: 'Мастер-спальня',
         id: 'master-spalnya',
+        imagesInRow: 2,
         description: `Вся корпусная мебель изготовлена по индивидуальным эскизам нашего бюро, что позволило максимально 
           функционально организовать зоны хранения.`,
         images: [
@@ -1671,6 +1715,7 @@ export const projectsData = [
       {
         title: 'Мастер-санузел',
         id: 'master-sanuzel',
+        imagesInRow: 2,
         description: `В мастер зоне расположен индвидуальный санузел с отедльностоящей  ванной и просторной душевой. 
           На фоне спокойной каменной тектстуры выделяются яркие  акценты: объемные элементы из белого камня и черные линейные детали.`,
         images: [
@@ -1699,6 +1744,7 @@ export const projectsData = [
       {
         title: 'Гостевая спальня',
         id: 'gostevaya_spalnya',
+        imagesInRow: 2,
         description: `В каждой функциональной зоне предусмотрены несколько сценариев освещения - будь то яркий дневной свет, 
           направленный рабочий или приглушённый вечерний, создающий теплую и уютную атмосферу.`,
         images: [
@@ -1727,6 +1773,7 @@ export const projectsData = [
       {
         title: 'Гостевой санузел',
         id: 'gostevoy_sanuzel',
+        imagesInRow: 2,
         description: `Гостевой санузел выдержан в общей цветовой концепции с мастер санузлом.`,
         images: [
           {
@@ -1773,6 +1820,7 @@ export const projectsData = [
       {
         title: 'WOMEN SHOWROOM',
         id: 'women_showroom',
+        imagesInRow: 2,
         description: ``,
         images: [
           {
