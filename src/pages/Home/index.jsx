@@ -21,11 +21,11 @@ export default function Home() {
             naturalSlideHeight={125}
             isPlaying={true}
             infinite={true}
-            totalSlides={projectsData?.length - 1}
+            totalSlides={projectsData?.filter(item => item.active).length}
           >
             <Slider className={cls.slider}>
               {projectsData?.map((projectItem, index) => {
-                if (projectItem.mainImage) {
+                if (projectItem?.mainImage && projectItem?.active === true) {
                   return (
                     <Slide key={index} index={index} className={cls.slider_slide} style={{paddingBottom: '0px'}}>
                       <Link to={`/projects/${projectItem.id}`}>

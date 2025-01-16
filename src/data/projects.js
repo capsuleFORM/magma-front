@@ -1364,7 +1364,6 @@ export const projectsData = [
       },
     ],
   },
-
   {
     id: 'como-penthouse-260',
     order: 193,
@@ -1561,23 +1560,263 @@ export const projectsData = [
       },
     ]
   },
-
   {
     id: 'silver-foutain-65',
-    order: 100,
-    active: false,
+    order: 192,
+    active: true,
     title: 'SILVER FOUTAIN 65',
-    descriptions: [],
+    descriptions: [
+      `Silver Fountain_65 уникален своей задачей - это инвестиционный проект, работа над которым началась на стадии выбора апартаментов в данном жилом комплексе. 
+      Тщательно изучив все предложения от застройщика, мы сделали выбор в пользу этого апартамента из-за выгодного расположения входной двери, 
+      коммуникаций и несущих конструкций, что в свою очередь позволило нам максимально эффективно использовать небольшую площадь в рамках поставленной задачи - 
+      проект должен отвечать определенному набору параметров, соответствующих запросам рынка инвестиционной недвижимости в бизнес-сегменте.`
+    ],
     stats: {
       category: 'Интерьер',
-      location: '',
+      location: 'г. Москва',
       year: 2021,
-      stage: '',
-      square: '',
+      stage: 'Реализован',
+      square: '65',
     },
-    schemeImage: '',
-    mainImage: '',
-    smallImage: '015-1.jpg',
-    sections: [],
+    schemeImage: 'SF-65.svg',
+    mainImage: '1.png',
+    smallImage: 'SF-65.png',
+    sections: [
+      {
+        title: 'Кухня-гостиная',
+        id: 'kuhnya-gostinnaya',
+        description: `Просторная кухня-гостиная занимает центральное место в квартире и разделяет в диаметральные стороны два спальных блока: 
+          мастер зону и универсальную комнату, которая, в зависимости от потребностей конечного покупателя, может быть детской, кабинетом или гостевой спальней.`,
+        images: [
+          {
+            title: 'Интерьер кухня-гостиной',
+            image: '2.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер кухня-гостиной',
+            image: '3.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухня-гостиной',
+            image: '4.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухня-гостиной',
+            image: '5.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухня-гостиной',
+            image: '6.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухня-гостиной',
+            image: '7.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер кухня-гостиной',
+            image: '8.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухня-гостиной',
+            image: '9.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухня-гостиной',
+            image: '10.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер кухня-гостиной',
+            image: '11.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Мастер-спальня',
+        id: 'master-spalnya',
+        description: `Вся корпусная мебель изготовлена по индивидуальным эскизам нашего бюро, что позволило максимально 
+          функционально организовать зоны хранения.`,
+        images: [
+          {
+            title: 'Интерьер мастер-спальни',
+            image: '12.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер-спальни',
+            image: '13.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер-спальни',
+            image: '14.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер-спальни',
+            image: '15.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Мастер-санузел',
+        id: 'master-sanuzel',
+        description: `В мастер зоне расположен индвидуальный санузел с отедльностоящей  ванной и просторной душевой. 
+          На фоне спокойной каменной тектстуры выделяются яркие  акценты: объемные элементы из белого камня и черные линейные детали.`,
+        images: [
+          {
+            title: 'Интерьер мастер-санузла',
+            image: '16.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер-санузла',
+            image: '17.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер-санузла',
+            image: '18.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер мастер-санузла',
+            image: '19.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Гостевая спальня',
+        id: 'gostevaya_spalnya',
+        description: `В каждой функциональной зоне предусмотрены несколько сценариев освещения - будь то яркий дневной свет, 
+          направленный рабочий или приглушённый вечерний, создающий теплую и уютную атмосферу.`,
+        images: [
+          {
+            title: 'Интерьер гостевой спальни',
+            image: '20.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевой спальни',
+            image: '21.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевой спальни',
+            image: '22.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевой спальни',
+            image: '23.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+      {
+        title: 'Гостевой санузел',
+        id: 'gostevoy_sanuzel',
+        description: `Гостевой санузел выдержан в общей цветовой концепции с мастер санузлом.`,
+        images: [
+          {
+            title: 'Интерьер гостевого санузла',
+            image: '24.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевого санузла',
+            image: '25.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевого санузла',
+            image: '26.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер гостевого санузла',
+            image: '27.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+    ],
+  },
+  {
+    id: 'fusion-showroom',
+    order: 191,
+    active: true,
+    title: 'FUSION SHOWROOM ',
+    descriptions: [],
+    stats: {
+      category: 'Коммерческий интерьер',
+      location: 'г. Кисловодск',
+      year: 2024,
+      stage: 'Реализован',
+      square: '80',
+    },
+    schemeImage: 'FSW.svg',
+    mainImage: '1.png',
+    smallImage: 'FUSION.png',
+    sections: [
+      {
+        title: 'WOMEN SHOWROOM',
+        id: 'women_showroom',
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '2.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '3.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '4.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '5.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '6.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '7.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '8.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '9.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+    ]
   },
 ]
