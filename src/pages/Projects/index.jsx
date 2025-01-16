@@ -64,7 +64,7 @@ export default function Projects() {
                   <Link key={index} className={[cls.projectCard, !projectItem.stats.year && cls.disabled].join(' ')} 
                     to={`/projects/${projectItem.id}`}>
                     <MotionAnimate animation={'fade'}>
-                      <img title={projectItem.title} src={`/images/${projectItem.smallImage}`}/>
+                      <img title={projectItem.title} src={`/images/projects/${projectItem.id}/${projectItem.smallImage}`}/>
                       <MotionAnimate animation={'fadeInUp'}>
                         <div className={cls.projectCard_title}>
                           <span>
@@ -97,7 +97,7 @@ export default function Projects() {
                       <Link key={projectItemIndex} className={[cls.projectCard, !projectItem.stats.year && cls.disabled].join(' ')} 
                         to={`/projects/${projectItem.id}`}>
                         <MotionAnimate animation={'fade'}>
-                          <img title={projectItem.title} src={`/images/${projectItem.smallImage}`}/>
+                          <img title={projectItem.title} src={`/images/projects/${projectItem.id}/${projectItem.smallImage}`}/>
                           <MotionAnimate animation={'fadeInUp'}>
                             <div className={cls.projectCard_title}>
                               <span>

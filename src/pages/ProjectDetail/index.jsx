@@ -60,7 +60,7 @@ export default function ProjectDetail() {
         <section>
           <MotionAnimate animation={'fade'}>
             <img title={currentProjectData?.title} className={cls.mainImage}
-              src={`/images/${currentProjectData?.mainImage}`} />
+              src={`/images/projects/${projectId}/${currentProjectData?.mainImage}`} />
           </MotionAnimate>
           <MotionAnimate animation={'fadeInUp'}>
             <h1>
@@ -128,8 +128,8 @@ export default function ProjectDetail() {
               <div className={cls.infoRow_col}>
                 <MotionAnimate animation={'fade'}>
                   <img title={'Планировка'} className={cls.schemeImage} 
-                    src={`/images/${currentProjectData.schemeImage}`} 
-                    onClick={() => openImageLightBoxModal(`/images/${currentProjectData.schemeImage}`)}/>
+                    src={`/images/projects/${projectId}/${currentProjectData.schemeImage}`} 
+                    onClick={() => openImageLightBoxModal(`/images/projects/${projectId}/${currentProjectData.schemeImage}`)}/>
                 </MotionAnimate>
               </div>
             </div>
@@ -154,8 +154,8 @@ export default function ProjectDetail() {
                     return (
                       <div key={imageIndex} className={[cls.imagesTable_image, imageItem.isFullWidth && cls.fullWidth].join(' ')}>
                         <MotionAnimate animation={'fade'}>
-                          <img title={imageItem.title} src={`/images/${imageItem.image}`} 
-                            onClick={() => openImageLightBoxModal(`/images/${imageItem.image}`)} />
+                          <img title={imageItem.title} src={`/images/projects/${projectId}/${imageItem.image}`} 
+                            onClick={() => openImageLightBoxModal(`/images/projects/${projectId}/${imageItem.image}`)} />
                         </MotionAnimate>
                       </div>
                     )
