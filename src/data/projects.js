@@ -20,6 +20,7 @@ export const projectsData = [
     schemeImage: 'CP260.svg',
     mainImage: '2-2.png',
     smallImage: '17-5.jpg',
+    showAnchors: true,
     sections: [
       {
         title: 'Кухня-гостиная',
@@ -289,7 +290,13 @@ export const projectsData = [
     order: 199,
     active: true,
     title: 'RESIDENCE HALL 50',
-    descriptions: [],
+    descriptions: [
+      `Residence Hall 50 — инвестиционный проект апартаментов квартирного типа, где классическая эстетика 
+        неоклассики переплетается с актуальными современными решениями.`,
+      `Интерьер выдержан в палитре мягких природных оттенков: светлые бежевые и серые тона гармонично дополнены 
+        насыщенными терракотовыми и глубокими коричневыми акцентами. Основные материалы — натуральное дерево, камень и 
+        металл — формируют природную эстетику и подчеркивают премиальный характер пространства.`
+    ],
     stats: {
       category: 'Интерьер',
       location: 'г. Москва',
@@ -300,6 +307,7 @@ export const projectsData = [
     schemeImage: 'RH-50.svg',
     mainImage: '1.png',
     smallImage: 'RH-50-1.png',
+    showAnchors: true,
     sections: [
       {
         title: 'Кухня-гостиная',
@@ -437,7 +445,12 @@ export const projectsData = [
     order: 198,
     active: true,
     title: 'SILVER FOUTAIN 50',
-    descriptions: [],
+    descriptions: [
+      `Вдохновленные скандинавскими архитектурными традициями и японской утонченностью в эстетике и мастерстве, 
+        мы разработали проект, который объединяет лучшее из двух миров. Ограниченная площадь и множество функциональных 
+        задач потребовали особого подхода к созданию планировочного решения.`,
+      `В результате мы создали уникальное пространство, где каждая деталь тщательно продумана и доведена до совершенства.`
+    ],
     stats: {
       category: 'Интерьер',
       location: 'г. Москва',
@@ -448,6 +461,7 @@ export const projectsData = [
     schemeImage: 'SF-50.svg',
     mainImage: '1.jpg',
     smallImage: 'SF-110.png',
+    showAnchors: true,
     sections: [
       {
         title: 'Кухня-гостиная',
@@ -627,6 +641,7 @@ export const projectsData = [
     schemeImage: 'SF-100.svg',
     mainImage: '1.png',
     smallImage: 'SF-100.png',
+    showAnchors: true,
     sections: [
       {
         title: 'Кухня-гостиная',
@@ -790,7 +805,12 @@ export const projectsData = [
     order: 196,
     active: true,
     title: 'SILVER FOUTAIN 108',
-    descriptions: [],
+    descriptions: [
+      `Проект Silver Fountain 108 стал воплощением современных минималистичных принципов, где каждая 
+        деталь продумана до совершенства, а пространство само рассказывает свою историю.`,
+      `Здесь каждая линия, текстура и оттенок отражают наше стремление к гармонии функциональности и эстетики. 
+        Освободив интерьер от лишнего, мы создали пространство, которое вдохновляет, дарит комфорт и наполняет жизнь легкостью.`
+    ],
     stats: {
       category: 'Интерьер',
       location: 'г. Москва',
@@ -801,6 +821,7 @@ export const projectsData = [
     schemeImage: 'SF-108.svg',
     mainImage: '1.png',
     smallImage: 'SF-108.png',
+    showAnchors: true,
     sections: [
       {
         title: 'Кухня-гостиная',
@@ -1004,7 +1025,14 @@ export const projectsData = [
     order: 195,
     active: true,
     title: 'NOVGORODSKAYA 65',
-    descriptions: [],
+    descriptions: [
+      `Проект Novgorodskaya 65 стал нетипичной задачей для нашего бюро: мы работали с уже существующей планировкой 
+        в панельном доме серии П-43, где большинство стен являются несущими. В рамках проекта мы объединили 
+        принципы европейского минимализма с философией японского ваби-саби.`,
+      `Такой подход позволил создать интерьер, который одновременно подчеркивает современность пространства и сохраняет 
+        его теплую, естественную атмосферу. Несмотря на ограничения планировки, нам удалось реализовать проект, 
+        соответствующий высоким стандартам эстетики и комфорта.`
+    ],
     stats: {
       category: 'Интерьер',
       location: 'г. Москва',
@@ -1015,6 +1043,7 @@ export const projectsData = [
     schemeImage: 'NVG-65.svg',
     mainImage: '1.png',
     smallImage: 'NVG-65.png',
+    showAnchors: true,
     sections: [
       {
         title: 'Гостиная',
@@ -1112,7 +1141,15 @@ export const projectsData = [
     order: 194,
     active: true,
     title: 'PRIMEPARK 210',
-    descriptions: [],
+    descriptions: [
+      `Проект Primepark 210 воплощает свободу движения, обилие естественного света и гармонию лаконичного 
+        дизайна с функциональностью. Строгая геометрия форм и сдержанная цветовая палитра подчеркивают 
+        современный характер пространства.`,
+      `Квартира разделена на три основные зоны, каждая из которых представляет собой открытое пространство, 
+        структурированное отдельно стоящими элементами-"островами". Такое зонирование не только создает 
+        ощущение легкости и вариативности в движении, но и позволяет максимально использовать потенциал 
+        естественного освещения, наполняя интерьер жизненной энергией.`
+    ],
     stats: {
       category: 'Интерьер',
       location: 'г. Москва',
@@ -1123,6 +1160,7 @@ export const projectsData = [
     schemeImage: 'PP-210.svg',
     mainImage: '1.png',
     smallImage: 'PP-210.png',
+    showAnchors: true,
     sections: [
       {
         title: 'Гостиная',
@@ -1405,7 +1443,13 @@ export const projectsData = [
     order: 193,
     active: true,
     title: 'COMO PENTHOUSE 260',
-    descriptions: [],
+    descriptions: [
+      `Como Penthouse расположен в жилом комплексе Tron Como Residence, откуда открывается завораживающий вид 
+        на Адриатическое море и остров Святого Николая. Будва, с её богатой историей, стала идеальным фоном для этого проекта.`,
+      `Основной задачей было найти баланс между функциональностью пространства и сохранением уникальной видовой составляющей. 
+        Концепция интерьера строится вокруг центрального элемента — кухни, которая становится сердцем дома. 
+        Она объединяет все функциональные зоны, создавая уютную и гармоничную атмосферу для жизни.`
+    ],
     stats: {
       category: 'Интерьер',
       location: 'г. Будва',
@@ -1416,6 +1460,7 @@ export const projectsData = [
     schemeImage: 'CP-260.svg',
     mainImage: '1.png',
     smallImage: 'CP-260.png',
+    showAnchors: true,
     sections: [
       {
         title: 'Кухня-гостиная',
@@ -1608,10 +1653,11 @@ export const projectsData = [
     active: true,
     title: 'SILVER FOUTAIN 65',
     descriptions: [
-      `Silver Fountain_65 уникален своей задачей - это инвестиционный проект, работа над которым началась на стадии выбора апартаментов в данном жилом комплексе. 
-      Тщательно изучив все предложения от застройщика, мы сделали выбор в пользу этого апартамента из-за выгодного расположения входной двери, 
-      коммуникаций и несущих конструкций, что в свою очередь позволило нам максимально эффективно использовать небольшую площадь в рамках поставленной задачи - 
-      проект должен отвечать определенному набору параметров, соответствующих запросам рынка инвестиционной недвижимости в бизнес-сегменте.`
+      `Silver Fountain 65 — это инвестиционный проект, разработанный с учетом всех нюансов планировки и потребностей 
+        рынка бизнес-недвижимости. Выбор апартамента был сделан на основе анализа расположения входной двери, коммуникаций 
+        и несущих конструкций, что позволило максимально эффективно использовать компактное пространство.`,
+      `Проект сочетает в себе эстетическую привлекательность и практичность, отвечая всем требованиям современного 
+        инвестиционного жилья и гарантируя высокую рентабельность.`
     ],
     stats: {
       category: 'Интерьер',
@@ -1623,6 +1669,7 @@ export const projectsData = [
     schemeImage: 'SF-65.svg',
     mainImage: '1.png',
     smallImage: 'SF-65.png',
+    showAnchors: true,
     sections: [
       {
         title: 'Кухня-гостиная',
@@ -1816,6 +1863,7 @@ export const projectsData = [
     schemeImage: 'FSW.svg',
     mainImage: '1.png',
     smallImage: 'FUSION.png',
+    showAnchors: false,
     sections: [
       {
         title: 'WOMEN SHOWROOM',
@@ -1866,5 +1914,43 @@ export const projectsData = [
         ]
       },
     ]
+  },
+  {
+    id: 'omsk-45',
+    order: 191,
+    active: true,
+    title: 'OMSK 45',
+    descriptions: [],
+    stats: {
+      category: 'Интерьер',
+      location: '',
+      year: null,
+      stage: '',
+      square: '',
+    },
+    schemeImage: '',
+    mainImage: '',
+    smallImage: 'OMSK-45.png',
+    showAnchors: true,
+    sections: []
+  },
+  {
+    id: 'fusion-man',
+    order: 190,
+    active: true,
+    title: 'FUSION MAN',
+    descriptions: [],
+    stats: {
+      category: 'Коммерческий интерьер',
+      location: '',
+      year: null,
+      stage: '',
+      square: '',
+    },
+    schemeImage: '',
+    mainImage: '',
+    smallImage: 'FUSION-MAN.png',
+    showAnchors: true,
+    sections: []
   },
 ]

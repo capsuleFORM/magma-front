@@ -63,7 +63,7 @@ export default function ProjectDetail() {
               src={`/images/projects/${projectId}/${currentProjectData?.mainImage}`} />
           </MotionAnimate>
           <MotionAnimate animation={'fadeInUp'}>
-            <h1>
+            <h1 className={(!currentProjectData?.descriptions || currentProjectData?.descriptions.length < 1) ? cls.noDescriptionPage : ''}>
               {currentProjectData?.title}
             </h1>
           </MotionAnimate>
@@ -74,7 +74,9 @@ export default function ProjectDetail() {
                   <p>
                     <div className={cls.statsTable_item}>
                       <span>Категория</span>
-                      {currentProjectData?.stats?.category}
+                      <span className={cls.projectCategoryText}>
+                        {currentProjectData?.stats?.category}
+                      </span>
                     </div>
                     <div className={cls.statsTable_item}>
                       <span>Год</span>
@@ -99,31 +101,36 @@ export default function ProjectDetail() {
                   </p>
                 </div>
               </div>
-              <div className={cls.infoRow_col}>
-                {currentProjectData?.descriptions?.map((description, index) => {
-                  return (
-                    <p key={index}>
-                      {description}
-                    </p>
-                  )
-                })}
-              </div>
-            </div>
-          </MotionAnimate>
-          <MotionAnimate animation={'fade'}>
-            <div className={[cls.infoRow, cls.mobileSchemeBlock].join(' ')}>
-              <div className={cls.infoRow_col}>
-                <div className={cls.anchorsBlock}>
-                  {currentProjectData?.sections?.map((sectionItem, index) => {
+              {(currentProjectData?.descriptions && currentProjectData?.descriptions.length > 0) ? (
+                <div className={cls.infoRow_col}>
+                  {currentProjectData?.descriptions?.map((description, index) => {
                     return (
-                      <Link key={index} className={[cls.anchorsBlock_item, index === 0 && cls.active].join(' ')} 
-                        to={`/projects/${currentProjectData?.id}/#${sectionItem.id}`}>
-                        <SmallArrowRightIcon className={cls.smallArrowIcon} />
-                        {sectionItem.title}
-                      </Link>
+                      <p key={index}>
+                        {description}
+                      </p>
                     )
                   })}
                 </div>
+              ) : null}
+            </div>
+          </MotionAnimate>
+          <MotionAnimate animation={'fade'}>
+            <div className={[cls.infoRow, cls.mobileSchemeBlock, 
+              (!currentProjectData?.descriptions || currentProjectData?.descriptions.length < 1) && cls.noDescriptionPageScheme].join(' ')}>
+              <div className={cls.infoRow_col}>
+                {currentProjectData?.showAnchors ? (
+                  <div className={cls.anchorsBlock}>
+                    {currentProjectData?.sections?.map((sectionItem, index) => {
+                      return (
+                        <Link key={index} className={[cls.anchorsBlock_item, index === 0 && cls.active].join(' ')} 
+                          to={`/projects/${currentProjectData?.id}/#${sectionItem.id}`}>
+                          <SmallArrowRightIcon className={cls.smallArrowIcon} />
+                          {sectionItem.title}
+                        </Link>
+                      )
+                    })}
+                  </div>
+                ) : null}
               </div>
               <div className={cls.infoRow_col}>
                 <MotionAnimate animation={'fade'}>
@@ -145,9 +152,11 @@ export default function ProjectDetail() {
                       <h3 className={index === 0 ? cls.topSection : ''}>{sectionItem.title}</h3>
                     </MotionAnimate>
                   </div>
-                  <div className={cls.infoRow_col}>
-                    <h4 className={index === 0 ? cls.topSection : ''}>{sectionItem.description}</h4>
-                  </div>
+                  {sectionItem.description ? (
+                    <div className={cls.infoRow_col}>
+                      <h4 className={index === 0 ? cls.topSection : ''}>{sectionItem.description}</h4>
+                    </div>
+                  ) : null}
                 </div>
                 <div className={cls.imagesTable}>
                   {sectionItem.images.map((imageItem, imageIndex) => {
