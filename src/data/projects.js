@@ -2,6 +2,7 @@ export const projectsData = [
   {
     id: 'como-penthouse-200',
     order: 200,
+    sliderOrder: 200,
     active: false,
     title: 'COMO PENTHOUSE 200',
     descriptions: [
@@ -288,6 +289,7 @@ export const projectsData = [
   {
     id: 'residence-hall-50',
     order: 199,
+    sliderOrder: 200,
     active: true,
     title: 'RESIDENCE HALL 50',
     descriptions: [
@@ -441,10 +443,11 @@ export const projectsData = [
     ],
   },
   {
-    id: 'silver-foutain-50',
+    id: 'silver-fountain-50',
     order: 198,
+    sliderOrder: 200,
     active: true,
-    title: 'SILVER FOUTAIN 50',
+    title: 'SILVER FOUNTAIN 50',
     descriptions: [
       `Вдохновленные скандинавскими архитектурными традициями и японской утонченностью в эстетике и мастерстве, 
         мы разработали проект, который объединяет лучшее из двух миров. Ограниченная площадь и множество функциональных 
@@ -626,10 +629,11 @@ export const projectsData = [
     ],
   },
   {
-    id: 'silver-foutain-100',
+    id: 'silver-fountain-100',
     order: 197,
+    sliderOrder: 200,
     active: true,
-    title: 'SILVER FOUTAIN 100',
+    title: 'SILVER FOUNTAIN 100',
     descriptions: [],
     stats: {
       category: 'Интерьер',
@@ -801,10 +805,11 @@ export const projectsData = [
     ],
   },
   {
-    id: 'silver-foutain-108',
+    id: 'silver-fountain-108',
     order: 196,
+    sliderOrder: 200,
     active: true,
-    title: 'SILVER FOUTAIN 108',
+    title: 'SILVER FOUNTAIN 108',
     descriptions: [
       `Проект Silver Fountain 108 стал воплощением современных минималистичных принципов, где каждая 
         деталь продумана до совершенства, а пространство само рассказывает свою историю.`,
@@ -1023,6 +1028,7 @@ export const projectsData = [
   {
     id: 'novgorodskaya-65',
     order: 195,
+    sliderOrder: 200,
     active: true,
     title: 'NOVGORODSKAYA 65',
     descriptions: [
@@ -1139,6 +1145,7 @@ export const projectsData = [
   {
     id: 'primepark-210',
     order: 194,
+    sliderOrder: 200,
     active: true,
     title: 'PRIMEPARK 210',
     descriptions: [
@@ -1441,6 +1448,7 @@ export const projectsData = [
   {
     id: 'como-penthouse-260',
     order: 193,
+    sliderOrder: 250,
     active: true,
     title: 'COMO PENTHOUSE 260',
     descriptions: [
@@ -1648,10 +1656,11 @@ export const projectsData = [
     ]
   },
   {
-    id: 'silver-foutain-65',
+    id: 'silver-fountain-65',
     order: 192,
+    sliderOrder: 200,
     active: true,
-    title: 'SILVER FOUTAIN 65',
+    title: 'SILVER FOUNTAIN 65',
     descriptions: [
       `Silver Fountain 65 — это инвестиционный проект, разработанный с учетом всех нюансов планировки и потребностей 
         рынка бизнес-недвижимости. Выбор апартамента был сделан на основе анализа расположения входной двери, коммуникаций 
@@ -1848,10 +1857,11 @@ export const projectsData = [
     ],
   },
   {
-    id: 'fusion-showroom',
+    id: 'fusion-women',
     order: 191,
+    sliderOrder: 200,
     active: true,
-    title: 'FUSION SHOWROOM ',
+    title: 'FUSION WOMEN ',
     descriptions: [],
     stats: {
       category: 'Коммерческий интерьер',
@@ -1918,6 +1928,7 @@ export const projectsData = [
   {
     id: 'omsk-45',
     order: 191,
+    sliderOrder: 190,
     active: true,
     title: 'OMSK 45',
     descriptions: [],
@@ -1937,20 +1948,75 @@ export const projectsData = [
   {
     id: 'fusion-man',
     order: 190,
+    sliderOrder: 200,
     active: true,
     title: 'FUSION MAN',
     descriptions: [],
     stats: {
       category: 'Коммерческий интерьер',
-      location: '',
-      year: null,
-      stage: '',
-      square: '',
+      location: 'г. Кисловодск',
+      year: 2024,
+      stage: 'Реализован',
+      square: '40',
     },
-    schemeImage: '',
-    mainImage: '',
+    schemeImage: 'scheme.png',
+    mainImage: '1.png',
     smallImage: 'FUSION-MAN.png',
-    showAnchors: true,
-    sections: []
+    showAnchors: false,
+    sections: [
+      {
+        title: 'MEN SHOWROOM',
+        id: 'man_showroom',
+        imagesInRow: 2,
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '2.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '3.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '4.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '5.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '6.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '7.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '8.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '9.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '10.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+    ]
   },
 ]

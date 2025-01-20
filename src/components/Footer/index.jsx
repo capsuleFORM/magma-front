@@ -33,14 +33,23 @@ export default function Footer({isHomePage = false}) {
     };
   }, []);
 
+  const getNextIndex = (array, currentIndex) => {
+    return (currentIndex + 1) % array.length;
+  }
+
   const getRandomDifferentProject = (currentProjectId) => {
     if (currentProjectId) {
-      const filteredItems = projectsData?.filter(item => item.id !== currentProjectId); 
-      if (filteredItems.length === 0) {
+      const filteredItems = projectsData?.filter(item => item.stats.year !== null && item.active === true); 
+      if (!filteredItems || filteredItems.length === 0) {
         return null;
       }
-      const randomIndex = Math.floor(Math.random() * filteredItems.length);
-      return filteredItems[randomIndex];
+      const currentProjectIndex = filteredItems?.findIndex(item => item.id === currentProjectId);
+      if (currentProjectIndex < 0) {
+        return null;
+      }
+      const nextProjectIndex = getNextIndex(filteredItems, currentProjectIndex);
+
+      return filteredItems[nextProjectIndex];
     }
   } 
 

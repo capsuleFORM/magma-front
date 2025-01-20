@@ -91,30 +91,31 @@ export default function Projects() {
             <MotionAnimate key={categoryIndex} animation={'fade'}>
               <h2>{category}</h2>
               <div className={[cls.projects, isContentShowing && cls.showing].join(' ')}>
-                {projectsData?.map((projectItem, projectItemIndex) => {
-                  if (projectItem.active && projectItem.stats.category === category) {
-                    return (
-                      <Link key={projectItemIndex} className={[cls.projectCard, !projectItem.stats.year && cls.disabled].join(' ')} 
-                        to={`/projects/${projectItem.id}`}>
-                        <MotionAnimate animation={'fade'}>
-                          <img title={projectItem.title} src={`/images/projects/${projectItem.id}/${projectItem.smallImage}`}/>
-                          <MotionAnimate animation={'fadeInUp'}>
-                            <div className={cls.projectCard_title}>
-                              <span>
-                                {projectItem.title}
-                              </span>
-                              <span>
-                                {projectItem.stats.year ? projectItem.stats.year : 'SOON'}
-                              </span>
-                            </div>
-                            <div className={cls.projectCard_subtitle}>
-                              {projectItem.stats.category}
-                            </div>
-                          </MotionAnimate>
+                {projectsData?.filter(projectItem => projectItem?.mainImage && projectItem?.active === true)
+                  ?.sort((a, b) => b.order - a.order)
+                  .map((projectItem, projectItemIndex) => {
+                  return (
+                    <Link key={projectItemIndex} className={[cls.projectCard, !projectItem.stats.year && cls.disabled].join(' ')} 
+                      to={`/projects/${projectItem.id}`}>
+                      <MotionAnimate animation={'fade'}>
+                        <img title={projectItem.title} src={`/images/projects/${projectItem.id}/${projectItem.smallImage}`}/>
+                        <MotionAnimate animation={'fadeInUp'}>
+                          <div className={cls.projectCard_title}>
+                            <span>
+                              {projectItem.title}
+                            </span>
+                            <span>
+                              {projectItem.stats.year ? projectItem.stats.year : 'SOON'}
+                            </span>
+                          </div>
+                          <div className={cls.projectCard_subtitle}>
+                            {projectItem.stats.category}
+                          </div>
                         </MotionAnimate>
-                      </Link>
-                    )
-                  }
+                      </MotionAnimate>
+                    </Link>
+                  )
+                  
                 })}
               </div>
             </MotionAnimate>

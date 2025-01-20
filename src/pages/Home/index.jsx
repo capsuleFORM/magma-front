@@ -19,21 +19,23 @@ export default function Home() {
           <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={125}
+            interval={globalsData?.sliderIntervalMs}
             isPlaying={true}
+            lockOnWindowScroll={true}
             infinite={true}
-            totalSlides={projectsData?.filter(item => item.active).length}
+            totalSlides={projectsData?.filter(item => item.active === true && item.stats.year !== null).length}
           >
             <Slider className={cls.slider}>
-              {projectsData?.map((projectItem, index) => {
-                if (projectItem?.mainImage && projectItem?.active === true) {
-                  return (
-                    <Slide key={index} index={index} className={cls.slider_slide} style={{paddingBottom: '0px'}}>
-                      <Link to={`/projects/${projectItem.id}`}>
-                        <img title={projectItem.title} src={`/images/projects/${projectItem.id}/${projectItem.mainImage}`} />
-                      </Link>
-                    </Slide>
-                  )
-                }
+              {projectsData?.filter(projectItem => projectItem?.mainImage && projectItem?.active === true && projectItem.stats.year !== null)
+                ?.sort((a, b) => b.sliderOrder - a.sliderOrder)
+                .map((projectItem, index) => {
+                return (
+                  <Slide key={index} index={index} className={cls.slider_slide} style={{paddingBottom: '0px'}}>
+                    <Link to={`/projects/${projectItem.id}`}>
+                      <img title={projectItem.title} src={`/images/projects/${projectItem.id}/${projectItem.mainImage}`} />
+                    </Link>
+                  </Slide>
+                )
               })}
             </Slider>
           </CarouselProvider>
