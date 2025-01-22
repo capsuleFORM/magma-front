@@ -48,6 +48,11 @@ export default function About() {
               </MotionAnimate>
             </div>
           </div>
+          <MotionAnimate animation={'fadeInUp'}>
+            <h2>
+              ПАРНЕРЫ
+            </h2>
+          </MotionAnimate>
           <div className={cls.infoRow}>
             {window.innerWidth < 900 ? (
               <div className={cls.partners}>

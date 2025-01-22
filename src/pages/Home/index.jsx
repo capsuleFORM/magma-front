@@ -23,6 +23,7 @@ export default function Home() {
             isPlaying={true}
             lockOnWindowScroll={true}
             infinite={true}
+            dragEnabled={false}
             totalSlides={projectsData?.filter(item => item.active === true && item.stats.year !== null).length}
           >
             <Slider className={cls.slider}>

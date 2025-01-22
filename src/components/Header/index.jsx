@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 export default function Header() {
   const location = useLocation();
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
     setIsMenuOpened(false);
@@ -24,12 +25,32 @@ export default function Header() {
     };
   }, [isMenuOpened]);
 
+  useEffect(() => {
+    let lastScroll = 0;
+
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
+      if ( (scrollTop > lastScroll) && (scrollTop > 370)) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+
+      lastScroll = scrollTop;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpened(prev => !prev);
   };
 
   return (
-    <header className={cls.header}>
+    <header className={[cls.header, (isHidden && isMenuOpened === false) && cls.hidden].join(' ')}>
       <div className={cls.content}>
         <Link to={'/'}>
           <Logo className={cls.logo} />
