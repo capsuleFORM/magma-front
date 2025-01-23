@@ -23,6 +23,13 @@ export default function Services() {
         const selectedCategoryElement = document.querySelector(`#categoryBlock_${category.replace(/\s+/g, '')}`);
         selectedCategoryElement.insertAdjacentElement('afterend', contentBlockElement);
 
+        const elementPosition = selectedCategoryElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - 100;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+
         setTimeout(() => {
           setSelectedCategory(category);
           setIsContentShowing(true);
