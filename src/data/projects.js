@@ -1861,75 +1861,75 @@ export const projectsData = [
       },
     ],
   },
-  {
-    id: 'fusion-women',
-    order: 191,
-    sliderOrder: 200,
-    active: true,
-    title: 'FUSION WOMEN ',
-    descriptions: [],
-    stats: {
-      category: 'Коммерческий интерьер',
-      location: 'г. Кисловодск',
-      year: 2024,
-      stage: 'Реализован',
-      square: '80',
-    },
-    schemeImage: 'FUSION_W-scheme.png',
-    mainImage: '1.png',
-    smallImage: 'FUSION.png',
-    showAnchors: false,
-    sections: [
-      {
-        title: 'WOMEN SHOWROOM',
-        id: 'women_showroom',
-        imagesInRow: 2,
-        description: ``,
-        images: [
-          {
-            title: 'Интерьер WOMEN SHOWROOM',
-            image: '2.png',
-            isFullWidth: true,
-          },
-          {
-            title: 'Интерьер WOMEN SHOWROOM',
-            image: '3.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер WOMEN SHOWROOM',
-            image: '4.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер WOMEN SHOWROOM',
-            image: '5.png',
-            isFullWidth: true,
-          },
-          {
-            title: 'Интерьер WOMEN SHOWROOM',
-            image: '6.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер WOMEN SHOWROOM',
-            image: '7.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер WOMEN SHOWROOM',
-            image: '8.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер WOMEN SHOWROOM',
-            image: '9.png',
-            isFullWidth: false,
-          },
-        ]
-      },
-    ]
-  },
+  // {
+  //   id: 'fusion-women',
+  //   order: 191,
+  //   sliderOrder: 200,
+  //   active: true,
+  //   title: 'FUSION WOMEN ',
+  //   descriptions: [],
+  //   stats: {
+  //     category: 'Коммерческий интерьер',
+  //     location: 'г. Кисловодск',
+  //     year: 2024,
+  //     stage: 'Реализован',
+  //     square: '80',
+  //   },
+  //   schemeImage: 'FUSION_W-scheme.png',
+  //   mainImage: '1.png',
+  //   smallImage: 'FUSION.png',
+  //   showAnchors: false,
+  //   sections: [
+  //     {
+  //       title: 'WOMEN SHOWROOM',
+  //       id: 'women_showroom',
+  //       imagesInRow: 2,
+  //       description: ``,
+  //       images: [
+  //         {
+  //           title: 'Интерьер WOMEN SHOWROOM',
+  //           image: '2.png',
+  //           isFullWidth: true,
+  //         },
+  //         {
+  //           title: 'Интерьер WOMEN SHOWROOM',
+  //           image: '3.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер WOMEN SHOWROOM',
+  //           image: '4.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер WOMEN SHOWROOM',
+  //           image: '5.png',
+  //           isFullWidth: true,
+  //         },
+  //         {
+  //           title: 'Интерьер WOMEN SHOWROOM',
+  //           image: '6.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер WOMEN SHOWROOM',
+  //           image: '7.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер WOMEN SHOWROOM',
+  //           image: '8.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер WOMEN SHOWROOM',
+  //           image: '9.png',
+  //           isFullWidth: false,
+  //         },
+  //       ]
+  //     },
+  //   ]
+  // },
   {
     id: 'omsk-45',
     order: 191,
@@ -1950,78 +1950,78 @@ export const projectsData = [
     showAnchors: true,
     sections: []
   },
-  {
-    id: 'fusion-man',
-    order: 190,
-    sliderOrder: 200,
-    active: true,
-    title: 'FUSION MAN',
-    descriptions: [],
-    stats: {
-      category: 'Коммерческий интерьер',
-      location: 'г. Кисловодск',
-      year: 2024,
-      stage: 'Реализован',
-      square: '40',
-    },
-    schemeImage: 'scheme.png',
-    mainImage: '1.png',
-    smallImage: 'FUSION-MAN.png',
-    showAnchors: false,
-    sections: [
-      {
-        title: 'MEN SHOWROOM',
-        id: 'man_showroom',
-        imagesInRow: 2,
-        description: ``,
-        images: [
-          {
-            title: 'Интерьер MEN SHOWROOM',
-            image: '2.png',
-            isFullWidth: true,
-          },
-          {
-            title: 'Интерьер MEN SHOWROOM',
-            image: '3.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер MEN SHOWROOM',
-            image: '4.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер MEN SHOWROOM',
-            image: '5.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер MEN SHOWROOM',
-            image: '6.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер MEN SHOWROOM',
-            image: '7.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер MEN SHOWROOM',
-            image: '8.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер MEN SHOWROOM',
-            image: '9.png',
-            isFullWidth: false,
-          },
-          {
-            title: 'Интерьер MEN SHOWROOM',
-            image: '10.png',
-            isFullWidth: false,
-          },
-        ]
-      },
-    ]
-  },
+  // {
+  //   id: 'fusion-man',
+  //   order: 190,
+  //   sliderOrder: 200,
+  //   active: true,
+  //   title: 'FUSION MAN',
+  //   descriptions: [],
+  //   stats: {
+  //     category: 'Коммерческий интерьер',
+  //     location: 'г. Кисловодск',
+  //     year: 2024,
+  //     stage: 'Реализован',
+  //     square: '40',
+  //   },
+  //   schemeImage: 'scheme.png',
+  //   mainImage: '1.png',
+  //   smallImage: 'FUSION-MAN.png',
+  //   showAnchors: false,
+  //   sections: [
+  //     {
+  //       title: 'MEN SHOWROOM',
+  //       id: 'man_showroom',
+  //       imagesInRow: 2,
+  //       description: ``,
+  //       images: [
+  //         {
+  //           title: 'Интерьер MEN SHOWROOM',
+  //           image: '2.png',
+  //           isFullWidth: true,
+  //         },
+  //         {
+  //           title: 'Интерьер MEN SHOWROOM',
+  //           image: '3.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер MEN SHOWROOM',
+  //           image: '4.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер MEN SHOWROOM',
+  //           image: '5.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер MEN SHOWROOM',
+  //           image: '6.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер MEN SHOWROOM',
+  //           image: '7.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер MEN SHOWROOM',
+  //           image: '8.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер MEN SHOWROOM',
+  //           image: '9.png',
+  //           isFullWidth: false,
+  //         },
+  //         {
+  //           title: 'Интерьер MEN SHOWROOM',
+  //           image: '10.png',
+  //           isFullWidth: false,
+  //         },
+  //       ]
+  //     },
+  //   ]
+  // },
 ]

@@ -91,7 +91,8 @@ export default function Projects() {
             <MotionAnimate key={categoryIndex} animation={'fade'}>
               <h2>{category}</h2>
               <div className={[cls.projects, isContentShowing && cls.showing].join(' ')}>
-                {projectsData?.filter(projectItem => projectItem?.mainImage && projectItem?.active === true)
+                {projectsData?.filter(projectItem => projectItem?.mainImage && 
+                  projectItem?.active === true && projectItem?.stats.category === category)
                   ?.sort((a, b) => b.order - a.order)
                   .map((projectItem, projectItemIndex) => {
                   return (
