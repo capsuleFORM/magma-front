@@ -50,7 +50,7 @@ export default function About() {
           </div>
           <MotionAnimate animation={'fadeInUp'}>
             <h2>
-              ПАРНЕРЫ
+              ПАРТНЕРЫ
             </h2>
           </MotionAnimate>
           <div className={cls.infoRow}>
