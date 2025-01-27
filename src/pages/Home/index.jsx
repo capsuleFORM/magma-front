@@ -2,15 +2,25 @@ import { Link } from "react-router-dom";
 import cls from "./styles.module.scss";
 import { useMetaTags } from "react-metatags-hook";
 import { globalsData } from "../../data/globals";
-import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { projectsData } from "../../data/projects";
 import { MotionAnimate } from 'react-motion-animate';
+import Logo from "../../assets/logo.svg?react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   useMetaTags({
     title: `${globalsData?.siteTitlePrefix} Архитектурное бюро`
   });
+
+  const [isPreloaderVisible, setIsPreloaderVisible] = useState(true);
+
+  useEffect(() => {
+    setTimeout(function() {
+      setIsPreloaderVisible(false);
+    }, globalsData.preloaderDelayMS);
+  }, [])
 
   return (
     <section>
@@ -19,7 +29,7 @@ export default function Home() {
           <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={125}
-            interval={globalsData?.sliderIntervalMs}
+            interval={globalsData?.sliderIntervalMs}     
             isPlaying={true}
             lockOnWindowScroll={true}
             infinite={true}
@@ -39,7 +49,14 @@ export default function Home() {
                 )
               })}
             </Slider>
+            <DotGroup className={cls.sliderDots} />
           </CarouselProvider>
+        </MotionAnimate>
+      </div>
+
+      <div className={[cls.pagePreloader, isPreloaderVisible && cls.visible].join(' ')}>
+        <MotionAnimate animation={'fade'}>
+          <Logo className={cls.pagePreloader_logo} />
         </MotionAnimate>
       </div>
     </section>

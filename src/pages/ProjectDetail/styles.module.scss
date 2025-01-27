@@ -434,12 +434,15 @@
       width: 55px;
       height: 55px;
       border-radius: 50%;
-      border: 2px solid var(--black);
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--white);
-      opacity: 1;
+      background: #D7D7D7;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
 
       @media (max-width: 1024px) {
         width: 45px;

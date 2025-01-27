@@ -12,7 +12,7 @@ export const projectsData = [
       `Концепция внутренного пространства основывается на создании ядра, в роли которого выступает кухня. Она является сердцем дома, создавая свзяь между другими функциональными зонами.`,
     ],
     stats: {
-      category: 'Интерьер',
+      category: 'Жилой интерьер',
       location: 'г. Будва',
       year: 2021,
       stage: 'Реализация',
@@ -289,7 +289,7 @@ export const projectsData = [
   {
     id: 'residence-hall-50',
     order: 199,
-    sliderOrder: 200,
+    sliderOrder: 270,
     active: true,
     title: 'RESIDENCE HALL 50',
     descriptions: [
@@ -300,7 +300,7 @@ export const projectsData = [
         металл — формируют природную эстетику и подчеркивают премиальный характер пространства.`
     ],
     stats: {
-      category: 'Интерьер',
+      category: 'Жилой интерьер',
       location: 'г. Москва',
       year: 2025,
       stage: 'Реализация',
@@ -455,7 +455,7 @@ export const projectsData = [
       `В результате мы создали уникальное пространство, где каждая деталь тщательно продумана и доведена до совершенства.`
     ],
     stats: {
-      category: 'Интерьер',
+      category: 'Жилой интерьер',
       location: 'г. Москва',
       year: 2024,
       stage: 'Реализация',
@@ -631,7 +631,7 @@ export const projectsData = [
   {
     id: 'silver-fountain-100',
     order: 197,
-    sliderOrder: 200,
+    sliderOrder: 280,
     active: true,
     title: 'SILVER FOUNTAIN 100',
     descriptions: [
@@ -641,7 +641,7 @@ export const projectsData = [
         Освободив интерьер от лишнего, мы создали пространство, которое вдохновляет, дарит комфорт и наполняет жизнь легкостью.`
     ],
     stats: {
-      category: 'Интерьер',
+      category: 'Жилой интерьер',
       location: 'г. Москва',
       year: 2024,
       stage: 'Реализация',
@@ -811,8 +811,8 @@ export const projectsData = [
   },
   {
     id: 'silver-fountain-108',
-    order: 196,
-    sliderOrder: 200,
+    order: 195,
+    sliderOrder: 290,
     active: true,
     title: 'SILVER FOUNTAIN 108',
     descriptions: [
@@ -822,7 +822,7 @@ export const projectsData = [
         Освободив интерьер от лишнего, мы создали пространство, которое вдохновляет, дарит комфорт и наполняет жизнь легкостью.`
     ],
     stats: {
-      category: 'Интерьер',
+      category: 'Жилой интерьер',
       location: 'г. Москва',
       year: 2023,
       stage: 'Реализован',
@@ -1032,7 +1032,7 @@ export const projectsData = [
   },
   {
     id: 'novgorodskaya-65',
-    order: 195,
+    order: 196,
     sliderOrder: 200,
     active: true,
     title: 'NOVGORODSKAYA 65',
@@ -1045,7 +1045,7 @@ export const projectsData = [
         соответствующий высоким стандартам эстетики и комфорта.`
     ],
     stats: {
-      category: 'Интерьер',
+      category: 'Жилой интерьер',
       location: 'г. Москва',
       year: 2024,
       stage: 'Концепция',
@@ -1150,7 +1150,7 @@ export const projectsData = [
   {
     id: 'primepark-210',
     order: 194,
-    sliderOrder: 200,
+    sliderOrder: 300,
     active: true,
     title: 'PRIMEPARK 210',
     descriptions: [
@@ -1163,7 +1163,7 @@ export const projectsData = [
         естественного освещения, наполняя интерьер жизненной энергией.`
     ],
     stats: {
-      category: 'Интерьер',
+      category: 'Жилой интерьер',
       location: 'г. Москва',
       year: 2022,
       stage: 'Реализован',
@@ -1464,7 +1464,7 @@ export const projectsData = [
         Она объединяет все функциональные зоны, создавая уютную и гармоничную атмосферу для жизни.`
     ],
     stats: {
-      category: 'Интерьер',
+      category: 'Жилой интерьер',
       location: 'г. Будва',
       year: 2021,
       stage: 'Реализован',
@@ -1674,7 +1674,7 @@ export const projectsData = [
         инвестиционного жилья и гарантируя высокую рентабельность.`
     ],
     stats: {
-      category: 'Интерьер',
+      category: 'Жилой интерьер',
       location: 'г. Москва',
       year: 2021,
       stage: 'Реализован',
@@ -1861,75 +1861,75 @@ export const projectsData = [
       },
     ],
   },
-  // {
-  //   id: 'fusion-women',
-  //   order: 191,
-  //   sliderOrder: 200,
-  //   active: true,
-  //   title: 'FUSION WOMEN ',
-  //   descriptions: [],
-  //   stats: {
-  //     category: 'Коммерческий интерьер',
-  //     location: 'г. Кисловодск',
-  //     year: 2024,
-  //     stage: 'Реализован',
-  //     square: '80',
-  //   },
-  //   schemeImage: 'FUSION_W-scheme.png',
-  //   mainImage: '1.png',
-  //   smallImage: 'FUSION.png',
-  //   showAnchors: false,
-  //   sections: [
-  //     {
-  //       title: 'WOMEN SHOWROOM',
-  //       id: 'women_showroom',
-  //       imagesInRow: 2,
-  //       description: ``,
-  //       images: [
-  //         {
-  //           title: 'Интерьер WOMEN SHOWROOM',
-  //           image: '2.png',
-  //           isFullWidth: true,
-  //         },
-  //         {
-  //           title: 'Интерьер WOMEN SHOWROOM',
-  //           image: '3.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер WOMEN SHOWROOM',
-  //           image: '4.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер WOMEN SHOWROOM',
-  //           image: '5.png',
-  //           isFullWidth: true,
-  //         },
-  //         {
-  //           title: 'Интерьер WOMEN SHOWROOM',
-  //           image: '6.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер WOMEN SHOWROOM',
-  //           image: '7.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер WOMEN SHOWROOM',
-  //           image: '8.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер WOMEN SHOWROOM',
-  //           image: '9.png',
-  //           isFullWidth: false,
-  //         },
-  //       ]
-  //     },
-  //   ]
-  // },
+  {
+    id: 'fusion-women',
+    order: 191,
+    sliderOrder: 260,
+    active: true,
+    title: 'FUSION WOMEN ',
+    descriptions: [],
+    stats: {
+      category: 'Коммерческий интерьер',
+      location: 'г. Кисловодск',
+      year: 2024,
+      stage: 'Реализован',
+      square: '80',
+    },
+    schemeImage: 'FUSION_W-scheme.png',
+    mainImage: '1.png',
+    smallImage: 'FUSION.png',
+    showAnchors: false,
+    sections: [
+      {
+        title: 'WOMEN SHOWROOM',
+        id: 'women_showroom',
+        imagesInRow: 2,
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '2.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '3.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '4.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '5.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '6.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '7.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '8.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер WOMEN SHOWROOM',
+            image: '9.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+    ]
+  },
   {
     id: 'omsk-45',
     order: 191,
@@ -1938,7 +1938,7 @@ export const projectsData = [
     title: 'OMSK 45',
     descriptions: [],
     stats: {
-      category: 'Интерьер',
+      category: 'Жилой интерьер',
       location: '',
       year: null,
       stage: '',
@@ -1950,78 +1950,78 @@ export const projectsData = [
     showAnchors: true,
     sections: []
   },
-  // {
-  //   id: 'fusion-man',
-  //   order: 190,
-  //   sliderOrder: 200,
-  //   active: true,
-  //   title: 'FUSION MAN',
-  //   descriptions: [],
-  //   stats: {
-  //     category: 'Коммерческий интерьер',
-  //     location: 'г. Кисловодск',
-  //     year: 2024,
-  //     stage: 'Реализован',
-  //     square: '40',
-  //   },
-  //   schemeImage: 'scheme.png',
-  //   mainImage: '1.png',
-  //   smallImage: 'FUSION-MAN.png',
-  //   showAnchors: false,
-  //   sections: [
-  //     {
-  //       title: 'MEN SHOWROOM',
-  //       id: 'man_showroom',
-  //       imagesInRow: 2,
-  //       description: ``,
-  //       images: [
-  //         {
-  //           title: 'Интерьер MEN SHOWROOM',
-  //           image: '2.png',
-  //           isFullWidth: true,
-  //         },
-  //         {
-  //           title: 'Интерьер MEN SHOWROOM',
-  //           image: '3.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер MEN SHOWROOM',
-  //           image: '4.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер MEN SHOWROOM',
-  //           image: '5.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер MEN SHOWROOM',
-  //           image: '6.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер MEN SHOWROOM',
-  //           image: '7.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер MEN SHOWROOM',
-  //           image: '8.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер MEN SHOWROOM',
-  //           image: '9.png',
-  //           isFullWidth: false,
-  //         },
-  //         {
-  //           title: 'Интерьер MEN SHOWROOM',
-  //           image: '10.png',
-  //           isFullWidth: false,
-  //         },
-  //       ]
-  //     },
-  //   ]
-  // },
+  {
+    id: 'fusion-man',
+    order: 190,
+    sliderOrder: 200,
+    active: true,
+    title: 'FUSION MAN',
+    descriptions: [],
+    stats: {
+      category: 'Коммерческий интерьер',
+      location: 'г. Кисловодск',
+      year: 2024,
+      stage: 'Реализован',
+      square: '40',
+    },
+    schemeImage: 'scheme.png',
+    mainImage: '1.png',
+    smallImage: 'FUSION-MAN.png',
+    showAnchors: false,
+    sections: [
+      {
+        title: 'MEN SHOWROOM',
+        id: 'man_showroom',
+        imagesInRow: 2,
+        description: ``,
+        images: [
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '2.png',
+            isFullWidth: true,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '3.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '4.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '5.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '6.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '7.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '8.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '9.png',
+            isFullWidth: false,
+          },
+          {
+            title: 'Интерьер MEN SHOWROOM',
+            image: '10.png',
+            isFullWidth: false,
+          },
+        ]
+      },
+    ]
+  },
 ]
