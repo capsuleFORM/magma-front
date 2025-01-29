@@ -35,7 +35,7 @@ export const servicesData = [
     ],
   },
   {
-    title: 'Архитекрута',
+    title: 'Архитектура',
     sections: [
       {
         id: 1,
