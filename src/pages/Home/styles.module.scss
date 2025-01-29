@@ -72,11 +72,15 @@
   }
 
   .pagePreloader_logo {
-    width: 120px;
+    width: 250px;
     height: auto;
 
+    @media (max-width: 1440px) {
+      width: 192px;
+    }
+
     @media (max-width: 800px) {
-      width: 100px;
+      width: 155px;
     }
   }
 }
